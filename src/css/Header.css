@@ -1,0 +1,32 @@
+header {
+	z-index: 1;
+	background-color: #f3f3f3;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+header .border {
+	margin: auto;
+	width: 50%;
+	border-bottom: 1px solid black;
+}
+
+header li {
+	margin-left: 0.5rem;
+	font-weight: bolder;
+	list-style-type: none;
+	display: inline;
+}
+
+header a {
+	color: #de354c;
+	text-decoration: none;
+}
+
+
+header h1, header
+ul {
+	text-align: center;
+}

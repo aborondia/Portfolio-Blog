@@ -1,0 +1,27 @@
+.post {
+	margin: 0 auto 6rem;
+	width: 75vw;
+}
+
+.posts-body {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 100px;
+	margin-bottom: 1rem;
+}
+
+.title h2 {
+	text-align: center;
+}
+
+.title h2 {
+	margin-bottom: 0.125rem;
+}
+
+.title a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-style: italic;
+	margin-top: 0;
+}

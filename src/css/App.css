@@ -1,0 +1,25 @@
+.color-pallete {
+	color: #de354c;
+	color: #932432;
+	color: #3c1874;
+	color: #283747;
+	color: #f3f3f3;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #f3f3f3;
+}
+
+main {
+	margin-top: 8rem;
+}
+
+h1,
+h2 {
+	color: #3c1874;
+}
+
+
