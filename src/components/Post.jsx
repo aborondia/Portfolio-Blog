@@ -1,15 +1,15 @@
+import {Link} from 'react-router-dom';
+import Container from '@material-ui/core/Container';
+import '../css/Post.css';
+
 const Post = ({ post }) => {
 	return (
-		<div className='post'>
-			<div className='title'>
-				<h2>{post.title}</h2>
-				<a href='./index.html'>by Andrew Borondia</a>
-			</div>
+		<Container maxWidth="md">
+				{post.title}
+				{post.date}
+				<Link to='./about-me.html'>by Andrew Borondia</Link>
 			{post.fullPost}
-			{/* <div className='read-more'>
-				<button>More</button>
-			</div> */}
-		</div>
+		</Container>
 	);
 };
 

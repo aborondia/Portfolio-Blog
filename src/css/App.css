@@ -1,25 +1,12 @@
-.color-pallete {
-	color: #de354c;
-	color: #932432;
-	color: #3c1874;
-	color: #283747;
-	color: #f3f3f3;
-}
-
 body {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	background-color: #f3f3f3;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 main {
-	margin-top: 8rem;
+  height: fit-content;
+  width: 100%;
+  margin-top: 2rem;
 }
-
-h1,
-h2 {
-	color: #3c1874;
-}
-
-

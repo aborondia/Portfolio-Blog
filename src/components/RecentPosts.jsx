@@ -1,4 +1,3 @@
-import '../css/RecentPosts.css'
 
 const RecentPosts = () => {
 	return <></>;
