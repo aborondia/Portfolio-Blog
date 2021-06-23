@@ -1,11 +1,9 @@
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import {Link as HTTPLink} from '@material-ui/core';
 import "../css/Bibliography.css";
 
-const Bibliography = ({ post }) => {
-  const citations = [...post.citations];
-
+const Bibliography = ({ citations }) => {
   return (
     <Container id="bibliography">
       <Typography
@@ -14,7 +12,9 @@ const Bibliography = ({ post }) => {
         variant="h3"
         color="textSecondary"
         component="div"
-      >Bibliography</Typography>
+      >
+        Bibliography
+      </Typography>
       {citations.map((citation, index) => {
         return (
           <Container key={index}>
@@ -27,7 +27,7 @@ const Bibliography = ({ post }) => {
             >
               {citation.author}. {citation.date}. {citation.document}.{" "}
               {citation.retrieved}, from{" "}
-              <Link href={citation.link}>{citation.link}</Link>
+              <HTTPLink to={citation.link}>{citation.link}</HTTPLink>
             </Typography>
           </Container>
         );

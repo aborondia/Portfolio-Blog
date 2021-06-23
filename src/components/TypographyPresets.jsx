@@ -1,5 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import {Link as HTTPLink} from '@material-ui/core';
+
 
 export const Title = (content) => {
   return (
@@ -42,7 +44,7 @@ export const PostDate = (date) => {
   );
 };
 
-export const Paragraph = (paragraphs, id) => {
+export const Paragraph = (paragraph) => {
   return (
     <Typography
       display="block"
@@ -50,17 +52,26 @@ export const Paragraph = (paragraphs, id) => {
       color="textPrimary"
       component="div"
     >
-      {paragraphs[id]}
+      {paragraph}
     </Typography>
   );
 };
 
-export const Image = (images, id) => {
+export const Image = (image) => {
   return (
     <Container className="image-container">
-      <img src={images[`img${id}`].src} alt={images[`img${id}`].alt} />
+      <img src={image.src} alt={image.alt} />
       <Typography variant="caption" color="textSecondary" component="div">
-        {images[`img${id}`].caption}
+        {image.caption.text}
+        <HTTPLink
+            display="block"
+            to={image.caption.link}
+            alt=""
+            color="primary"
+            variant="caption"
+          >
+            {image.caption.link}
+          </HTTPLink>
       </Typography>
     </Container>
   );

@@ -25,6 +25,8 @@
 }
 
 #post-body .quote{
+  margin-top: 1rem;
   font-style: italic;
   font-weight: bold;
+  display: inline-block;
 }
