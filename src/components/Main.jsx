@@ -1,7 +1,7 @@
 import React from "react";
 import PostPreview from "./PostPreview";
 
-const Main = ({ posts, images }) => {
+const Main = () => {
   const recentPosts = [];
 
   return (
@@ -12,7 +12,7 @@ const Main = ({ posts, images }) => {
         justifyContent: "space-evenly",
       }}
     >
-      <PostPreview post={posts[0]} image={images.post1.img1.src} />
+      <PostPreview />
     </div>
   );
 };

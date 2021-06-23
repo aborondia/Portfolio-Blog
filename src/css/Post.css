@@ -5,3 +5,21 @@
 .image-container p, .image-container img{
   max-width: 300px;
 }
+
+#post-body, #post-body .image-container{
+  padding: 0;
+}
+
+#post-body p{
+  margin-top: 1rem;
+}
+
+#post-body .caption{
+  margin: 0;
+  padding: 0;
+}
+
+#post-body ul{
+  margin-left: 1rem;
+  padding: 0;
+}

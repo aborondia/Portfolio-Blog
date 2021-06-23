@@ -8,6 +8,9 @@ import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import Contact from './components/Contact';
+import "./css/Post.css";
+
 
 const App = () => {
   const images = {
@@ -74,7 +77,7 @@ const App = () => {
           </Container>
           <Typography
             display="block"
-            variant="paragraph"
+            variant="body1"
             color="textPrimary"
             component="p"
           >
@@ -96,7 +99,7 @@ const App = () => {
           </Container>
           <Typography
             display="block"
-            variant="paragraph"
+            variant="body1"
             color="textPrimary"
             component="p"
           >
@@ -112,7 +115,7 @@ const App = () => {
           </Typography>
           <Typography
             display="block"
-            variant="paragraph"
+            variant="body1"
             color="textPrimary"
             component="p"
           >
@@ -133,7 +136,7 @@ const App = () => {
 
           <Typography
             display="block"
-            variant="paragraph"
+            variant="body1"
             color="textPrimary"
             component="p"
           >
@@ -156,7 +159,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/">
-            <Main posts={posts} images={images} />
+            <Main />
           </Route>
 
           <Route exact path="/recent-posts">
@@ -164,7 +167,7 @@ const App = () => {
           </Route>
 
           <Route path="/blog">
-            <Blog posts={posts} />
+            <Blog />
           </Route>
 
           <Route path="/projects">
@@ -172,10 +175,10 @@ const App = () => {
           </Route>
 
           <Route path="/about-me">
-            <AboutMe post={posts[0]} />
+            <AboutMe/>
           </Route>
 
-          <Route path="/contact">{/* <Contact /> */}</Route>
+          <Route path="/contact"><Contact /></Route>
         </Switch>
       </main>
     </>

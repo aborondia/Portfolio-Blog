@@ -3,29 +3,28 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { getPost } from "../Posts";
+import "../css/PostPreview.css";
 
 const PostPreview = ({ post, image }) => {
+  const postData = getPost(1).post;
+  const postImages = getPost(1).images;
+
   return (
-    <Card style={{ flexBasis: "40%", marginTop: "1rem" }}>
+    <Card className="preview-card">
       <CardHeader
-        title={post.title}
+      className='card-header'
+        title={postData.title}
         subheader="September XX, 20XX"
       />
       <CardMedia
-        style={{ height: "200px", width: "200px" }}
-        image={image}
-        title="Post"
+        className="card-media"
+        image={postImages.img1.src}
+        title={postImages.img1.alt}
       />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {post.description}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="go to post">MORE</IconButton>
-      </CardActions>
+      {postData.description}
+      <Button color='secondary' variant='contained' aria-label="go to post">MORE</Button>
     </Card>
   );
 };

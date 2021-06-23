@@ -1,15 +1,19 @@
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { getPost } from "../Posts";
+import Container from "@material-ui/core/Container";
 
-const AboutMe = ({ post }) => {
-	return (
-		<div className='post'>
-			<div className='title'>
-				<h2>{post.title}</h2>
-				<Link to='./about-me.html'>by Andrew Borondia</Link>
-			</div>
-			{post.fullPost}
-		</div>
-	);
+const AboutMe = () => {
+  const postData = getPost(1).post;
+  const postImages = getPost(1).images;
+
+  return (
+    <Container  maxWidth="md">
+      {postData.title}
+      {postData.date}
+      <Link to="./about-me.html">by Andrew Borondia</Link>
+      {postData.fullPost}
+    </Container>
+  );
 };
 
 export default AboutMe;
