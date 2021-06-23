@@ -1,7 +1,7 @@
 import Container from "@material-ui/core/Container";
 import Bibliography from "./components/Bibliography";
 import { Link } from "react-router-dom";
-import {Link as HTTPLink} from '@material-ui/core';
+import { Link as HTTPLink } from "@material-ui/core";
 import {
   Title,
   Description,
@@ -12,49 +12,49 @@ import {
 
 const images = {
   post1: {
-    img1: Image({
+    img1: {
       src: "http://localhost:3000/images/post1/about-me-ME.jpg",
       alt: '"A picture of me in punk makeup',
-      caption: { text: `Me on a typical day.`, link: '' },
-    }),
-    img2: Image({
+      caption: { text: `Me on a typical day.`, link: "" },
+    },
+    img2: {
       src: "images/post1/about-me-WINNIE.jpg",
       alt: "My dog Winnie smiling",
       caption: {
         text: `I don’t like sharing pictures of my daughter on the internet because
       there are too many weirdos (and not always the good kind), so here’s
       my dog Winnie.`,
-        link: '',
+        link: "",
       },
-    }),
-    img3: Image({
+    },
+    img3: {
       src: "images/post1/about-me-PRIDE.jpg",
       alt: "Me and my wife at Pride 2013",
       caption: {
         text: `My wife (then girlfriend) and I at Pride 2013 after the 5k fun run
       (told you it had been awhile!) It demonstrates my love of running, my
       love for my wife, and my love of being a less crappy person.`,
-        link: '',
+        link: "",
       },
-    }),
+    },
   },
   post2: {
-    img1: Image({
+    img1: {
       src: "http://localhost:3000/images/post2/image1.jpg",
       alt: '"A picture of me in punk makeup',
       caption: {
-        caption: `Image by Lewis Ogden`,
+        text: `Image by Lewis Ogden`,
         link: `https://www.flickr.com/photos/bitsfrombytes/44035385264`,
       },
-    }),
-    img2: Image({
+    },
+    img2: {
       src: "images/post2/image2.jpg",
       alt: "My dog Winnie smiling",
       caption: {
         text: `Image by Kevin Smith`,
         link: `https://www.flickr.com/photos/145362372@N03/45109137715`,
       },
-    }),
+    },
   },
 };
 const paragraphs = {
@@ -195,15 +195,15 @@ const paragraphs = {
 };
 const otherText = {
   post1: {
-    title: Title("About me"),
-    description: Description("I talk all about myself."),
-    date: PostDate(1620414480),
+    title: "About me",
+    description: "I talk all about myself.",
+    date: 1620414480,
     citations: [],
   },
   post2: {
-    title: Title(`How to Keep Your Accounts Secure`),
-    description: Description(`I talk about how to protect yourself online.`),
-    date: PostDate(1621868940),
+    title: `How to Keep Your Accounts Secure`,
+    description: `I talk about how to protect yourself online.`,
+    date: 1621868940,
     citations: [
       {
         author: `Google & Harris Poll`,
@@ -226,18 +226,17 @@ const posts = [
   {
     id: 1,
     description: otherText.post1.description,
-    citations: otherText.post1.citations,
     fullPost: (
       <Container maxWidth="md" id="post-body">
-        {otherText.post1.title}
-        {otherText.post1.date}
+        {Title(otherText.post1.title)}
+        {PostDate(otherText.post1.date)}
         <Link to="./about-me">by Andrew Borondia</Link>
-        {images.post1.img1}
+        {Image(images.post1.img1)}
         {paragraphs.post1[0]}
-        {images.post1.img2}
+        {Image(images.post1.img2)}
         {paragraphs.post1[1]}
         {paragraphs.post1[2]}
-        {images.post1.img3}
+        {Image(images.post1.img3)}
         {paragraphs.post1[3]}
       </Container>
     ),
@@ -246,14 +245,14 @@ const posts = [
     id: 2,
     fullPost: (
       <Container maxWidth="md" id="post-body">
-        {otherText.post2.title}
-        {otherText.post2.date}
+        {Title(otherText.post2.title)}
+        {PostDate(otherText.post2.date)}
         <Link to="./about-me">by Andrew Borondia</Link>
         {paragraphs.post2[0]}
-        {images.post2.img1}
+        {Image(images.post2.img1)}
         {paragraphs.post2[1]}
         {paragraphs.post2[2]}
-        {images.post2.img2}
+        {Image(images.post2.img2)}
         {paragraphs.post2[3]}
         {paragraphs.post2[4]}
         <Bibliography citations={otherText.post2.citations} />
@@ -262,9 +261,16 @@ const posts = [
   },
 ];
 
-export const getPost = (id) => {
+export const getPostBody = (id) => {
   const post = posts.find((post) => post.id === id);
-  const postImages = images[`post${id}`];
 
-  return { post: post, images: postImages };
+  return post.fullPost;
+};
+
+export const getPostPreview = (id) => {
+  return {
+    title: otherText[`post${id}`].title,
+    description: otherText[`post${id}`].description,
+    image: images[`post${id}`].img1,
+  };
 };

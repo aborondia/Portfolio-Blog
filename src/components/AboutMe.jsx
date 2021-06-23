@@ -1,10 +1,10 @@
-import { getPost } from "../Posts";
+import { getPostBody } from "../Posts";
 import Container from "@material-ui/core/Container";
 
 const AboutMe = () => {
-  const postData = getPost(1).post;
+  const postData = getPostBody(1);
 
-  return <Container maxWidth="md">{postData.fullPost}</Container>;
+  return <Container maxWidth="md">{postData}</Container>;
 };
 
 export default AboutMe;

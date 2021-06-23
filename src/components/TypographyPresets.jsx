@@ -61,7 +61,7 @@ export const Image = (image) => {
   return (
     <Container className="image-container">
       <img src={image.src} alt={image.alt} />
-      <Typography variant="caption" color="textSecondary" component="div">
+      <Typography className='caption' variant="caption" color="textSecondary" component="div">
         {image.caption.text}
         <HTTPLink
             display="block"
