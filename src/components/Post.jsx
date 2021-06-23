@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import { getPost } from "../Posts";
 import Container from "@material-ui/core/Container";
+import Bibliography from "./Bibliography";
 
-const Post = ({ post }) => {
+const Post = () => {
   const postData = getPost(2).post;
-  const postImages = getPost(2).images;
 
   return (
-    <Container  maxWidth="md">
+    <Container maxWidth="md">
       {postData.title}
       {postData.date}
       <Link to="./about-me.html">by Andrew Borondia</Link>
       {postData.fullPost}
+      <Bibliography post={postData} />
     </Container>
   );
 };

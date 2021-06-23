@@ -4,7 +4,6 @@ import Container from "@material-ui/core/Container";
 
 const AboutMe = () => {
   const postData = getPost(1).post;
-  const postImages = getPost(1).images;
 
   return (
     <Container  maxWidth="md">

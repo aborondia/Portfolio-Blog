@@ -2,8 +2,6 @@ import React from "react";
 import PostPreview from "./PostPreview";
 
 const Main = () => {
-  const recentPosts = [];
-
   return (
     <div
       style={{
