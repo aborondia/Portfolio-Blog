@@ -19,7 +19,7 @@
   padding: 0;
 }
 
-#post-body ul{
+#post-body ul, #post-body ol{
   margin-left: 1rem;
   padding: 0;
 }
@@ -29,4 +29,50 @@
   font-style: italic;
   font-weight: bold;
   display: inline-block;
+}
+
+#post-body .paragraph{
+  margin: 1rem 0;
+}
+
+#post-body .paragraph-header{
+margin-bottom: 1rem;
+}
+
+#post-body .html-example, #post-body .css-example{
+  list-style: none;
+  background-color: hsl(0,0%,12%);
+  color: white;
+}
+
+#post-body .html-example li{
+padding: .5rem 0;
+}
+
+.bg-blue{
+  background-color: blue;
+}
+
+.bg-yellow{
+  background-color: yellow;
+}
+
+.fn-bold{
+  font-weight: bold;
+}
+
+.fn-italic{
+  font-style: italic;
+}
+
+.bg-hotpink{
+  background-color: hotpink;
+}
+
+.fn-hotpink{
+  color: hotpink;
+}
+
+.fn-20px{
+  font-size: 20px;
 }

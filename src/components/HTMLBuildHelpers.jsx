@@ -1,7 +1,7 @@
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import {Link as HTTPLink} from '@material-ui/core';
-
+import { Link } from "react-router-dom";
 
 export const Title = (content) => {
   return (
@@ -16,6 +16,26 @@ export const Title = (content) => {
     </Typography>
   );
 };
+
+export const Author = (authorName)=>{
+  return <Link to="./about-me" className='author'>by {authorName}</Link>
+
+}
+
+export const ParagraphHeader = (content)=>{
+  return (
+    <Typography
+      className="title"
+      display="block"
+      variant="h4"
+      color="secondary"
+      component="div"
+      className='paragraph-header'
+    >
+      {content}
+    </Typography>
+  );
+}
 
 export const Description = (content) => {
   return (
@@ -51,6 +71,7 @@ export const Paragraph = (paragraph) => {
       variant="body1"
       color="textPrimary"
       component="div"
+      className='paragraph'
     >
       {paragraph}
     </Typography>

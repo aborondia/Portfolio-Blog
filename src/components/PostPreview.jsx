@@ -4,17 +4,17 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import { getPostPreview } from "../Posts";
 import "../css/PostPreview.css";
-import { Description } from "./TypographyPresets";
+import { Description } from "./HTMLBuildHelpers";
 
-const PostPreview = () => {
-  const { title, description, image } = getPostPreview(1);
-
+const PostPreview = ({ postId }) => {
+  const { title, description, date, image } = getPostPreview(postId);
+console.log(getPostPreview(postId))
   return (
     <Card className="preview-card">
       <CardHeader
         className="card-header"
         title={title}
-        subheader="September XX, 20XX"
+        subheader={date}
       />
       <CardMedia className="card-media" image={image.src} title={image.alt} />
       {Description(description)}
