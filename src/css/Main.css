@@ -1,9 +1,10 @@
-#main-container{
+#main-container {
   max-width: fit-content;
 }
 
-#main-container .title{
-  margin-left: 4rem;
+#main-container > .title {
+  margin-top: 1rem;
+  text-align: center;
 }
 
 #card-container {

@@ -1,11 +1,29 @@
-#navbar .title{
-  font-size: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+#navbar {
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  background-color: hsla(231, 48%, 48%, 0.5);
 }
 
-#navbar .toolbar a span div{
-font-size: 1.25rem;
+#navbar .toolbar{
+  pointer-events: all;
 }
 
-#navbar > div{
+#logo{
+  position: fixed;
+  pointer-events: all;
+z-index: 1;
+}
+
+#navbar .toolbar a span div {
+  font-size: 1.25rem;
+  font-family: 'Open Sans';
+}
+
+#navbar > div {
   text-align: center;
-margin: auto;}
+  margin: auto;
+  padding-left: 12rem;
+}

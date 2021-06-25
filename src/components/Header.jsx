@@ -4,13 +4,13 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import '../css/Header.css';
 import Button from "@material-ui/core/Button";
-import { Title, ParagraphHeader } from "./HTMLBuildHelpers";
+import { ParagraphHeader } from "./HTMLBuildHelpers";
 
 const Header = () => {
   return (
     <AppBar id='navbar' position="static">
-        <Button component={Link} to="/" color="inherit">
-          {Title(`Andrew's Blog`)}
+        <Button id='logo' component={Link} to="/" color="inherit">
+          <img src='/images/logo2.png' alt='page logo'></img>
         </Button>
       <Toolbar className='toolbar'>
         <List>

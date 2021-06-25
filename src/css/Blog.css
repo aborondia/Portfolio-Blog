@@ -2,6 +2,10 @@
   margin-left: 4.75rem;
 }
 
+#post-descriptions-container ul > li, #post-descriptions-container ul > div{
+  width: fit-content;
+}
+
 #post-descriptions {
   list-style: none;
 }

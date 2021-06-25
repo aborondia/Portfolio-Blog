@@ -44,7 +44,7 @@ export const Description = (content) => {
     <Typography
       className="description"
       display="block"
-      variant="body2"
+      variant="inherit"
       color="textSecondary"
       component="div"
     >
@@ -57,7 +57,7 @@ export const PostDate = (date) => {
   return (
     <Typography
       className="date"
-      variant="caption"
+      variant="inherit"
       color="textSecondary"
       component="div"
     >
@@ -70,7 +70,7 @@ export const Paragraph = (paragraph) => {
   return (
     <Typography
       display="block"
-      variant="body1"
+      variant="h6"
       color="textPrimary"
       component="div"
       className="paragraph"
@@ -87,16 +87,16 @@ export const EmailAddress = (address) => {
       href={`mailto:${address}`}
       alt="contact me"
       color="primary"
-      variant="caption"
+      variant="inherit"
     >
       {address}
     </HTTPLink>
   );
 };
 
-export const Image = (image) => {
+export const Image = (image, larger = false) => {
   return (
-    <Container className="image-container">
+    <Container className={larger ? 'large-picture' : 'small-picture'}>
       <img src={image.src} alt={image.alt} />
       <Typography
         className="caption"
@@ -107,7 +107,7 @@ export const Image = (image) => {
         {image.caption.text}
         <HTTPLink
           display="block"
-          to={image.caption.link}
+          href={image.caption.link}
           alt=""
           color="primary"
           variant="caption"

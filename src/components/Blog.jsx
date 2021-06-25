@@ -9,6 +9,7 @@ const Blog = () => {
   const history = useHistory();
 
   const goToPost = (id) => {
+    window.scrollTo(0, 0);
     history.push({
       pathname: "/blog/post",
       search: `id=${id}`,

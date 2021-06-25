@@ -1,9 +1,24 @@
-.image-container{
-  margin: 1rem 0;
+#post-body .MuiContainer-root{
+margin: 0;
+padding: 0;
 }
 
-#post-body .image-container .caption, #post-body .image-container img{
-  max-width: 300px;
+#post-body .date{
+  margin-bottom: .25rem;
+}
+
+#post-body .author{
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#post-body .small-picture img, #post-body .small-picture .caption{
+  margin-left: 0;
+  width: 40%;
+}
+
+#post-body .large-picture .caption, #post-body .large-picture img{
+  width: 80%;
 }
 
 #post-body, #post-body .image-container{
@@ -39,7 +54,7 @@
 margin-bottom: 1rem;
 }
 
-#post-body .html-example, #post-body .css-example{
+#post-body .html-example, #post-body .css-example,#post-body .code-example{
   list-style: none;
   background-color: hsl(0,0%,12%);
   color: white;

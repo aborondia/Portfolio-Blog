@@ -1,8 +1,8 @@
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
+import { Title } from "./HTMLBuildHelpers";
+import '../css/Projects.css';
 
 const Projects = () => {
-  return ( <Container maxWidth="sm"><Typography variant='h2' color='textSecondary'>Coming Soon!</Typography></Container> );
-}
- 
+  return <div id='projects'>{Title("Coming Soon")}</div>;
+};
+
 export default Projects;

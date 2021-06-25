@@ -6,9 +6,8 @@ const Post = () => {
   const location = useLocation();
   const postId = new URLSearchParams(location.search).get("id");
   const postData = getPostBody(parseInt(postId));
-  // console.log(postData)
 
-  return <Container maxWidth="md">{postData}</Container>;
+  return <Container disableGutters maxWidth="lg">{postData}</Container>;
 };
 
 export default Post;

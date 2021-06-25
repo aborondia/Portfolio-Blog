@@ -1554,6 +1554,7 @@ const paragraphs = {
     ),
     Paragraph(
       <div className="bg-code code-example">
+        <code>
         <ul>
           <span className="fn-green">
             <li>
@@ -1621,6 +1622,7 @@ const paragraphs = {
           </li>
           <li>{"}"}</li>
         </ul>
+        </code>
       </div>
     ),
     Paragraph(
@@ -1637,6 +1639,7 @@ const paragraphs = {
     ),
     Paragraph(
       <div className="bg-code code-example">
+        <code>
         <ul>
           <li>
             <br />
@@ -1767,6 +1770,7 @@ const paragraphs = {
           <span className="pruple">return</span>{" "}
           <span className="fn-ltblue">resultsFound</span>;<li>{"}"};</li>
         </ul>
+        </code>
       </div>
     ),
     Paragraph(
@@ -1800,6 +1804,7 @@ const paragraphs = {
     ),
     Paragraph(
       <div className="bg-code code-example">
+        <code>
         <ul>
           <li>
             <span className="fn-green">
@@ -1891,6 +1896,7 @@ const paragraphs = {
             </span>
           </li>
         </ul>
+        </code>
       </div>
     ),
     Paragraph(
@@ -2104,20 +2110,20 @@ const posts = [
         {paragraphs.post6[7]}
         {ParagraphHeader(otherText.post6.headers[3])}
         {paragraphs.post6[8]}
-        {Image(images.post6.img1)}
+        {Image(images.post6.img1, true)}
         {ParagraphHeader(otherText.post6.headers[4])}
         {paragraphs.post6[9]}
-        {Image(images.post6.img2)}
+        {Image(images.post6.img2, true)}
         {ParagraphHeader(otherText.post6.headers[5])}
         {paragraphs.post6[10]}
         {paragraphs.post6[11]}
         {paragraphs.post6[12]}
         {ParagraphHeader(otherText.post6.headers[6])}
         {paragraphs.post6[13]}
-        {Image(images.post6.img3)}
+        {Image(images.post6.img3, true)}
         {ParagraphHeader(otherText.post6.headers[7])}
         {paragraphs.post6[14]}
-        {Image(images.post6.img4)}
+        {Image(images.post6.img4, true)}
         {ParagraphHeader(otherText.post6.headers[8])}
         {paragraphs.post6[15]}
       </Container>
