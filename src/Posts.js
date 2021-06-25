@@ -23,8 +23,8 @@ const images = {
       src: "images/post1/about-me-WINNIE.jpg",
       alt: "My dog Winnie smiling",
       caption: {
-        text: `I don’t like sharing pictures of my daughter on the internet because
-      there are too many weirdos (and not always the good kind), so here’s
+        text: `I don't like sharing pictures of my daughter on the internet because
+      there are too many weirdos (and not always the good kind), so here's
       my dog Winnie.`,
         link: "",
       },
@@ -77,6 +77,50 @@ const images = {
     },
   },
   post4: {},
+  post5: {
+    img1: {
+      src: "http://localhost:3000/images/post6/image1.jpg",
+      alt: "A diagram showing how the search results are handled in the app.",
+      caption: {
+        text: `Created with Lucidchart`,
+        link: `https://www.lucidchart.com/`,
+      },
+    },
+  },
+  post6: {
+    img1: {
+      src: "http://localhost:3000/images/post6/image1.png",
+      alt: "A diagram showing how the search results are handled in the app.",
+      caption: {
+        text: `Created with Lucidchart`,
+        link: `https://www.lucidchart.com/`,
+      },
+    },
+    img2: {
+      src: "http://localhost:3000/images/post6/image2.png",
+      alt: "A screenshot of search results in the app.",
+      caption: {
+        text: `A screenshot of search results in the app.`,
+        link: ``,
+      },
+    },
+    img3: {
+      src: "http://localhost:3000/images/post6/image3.png",
+      alt: "A diagram showing how books are saved in different shelves in the app.",
+      caption: {
+        text: `Created with Lucidchart`,
+        link: `https://www.lucidchart.com/`,
+      },
+    },
+    img4: {
+      src: "http://localhost:3000/images/post6/image4.png",
+      alt: "A screenshot of saved books in their respective bookshelves in the app.",
+      caption: {
+        text: `A screenshot of saved books in their respective bookshelves in the app.`,
+        link: ``,
+      },
+    },
+  },
 };
 const paragraphs = {
   post1: [
@@ -95,16 +139,16 @@ const paragraphs = {
     ),
     Paragraph(
       <>
-        I don’t have many hobbies but the ones I do have occupy a lot of my
+        I don't have many hobbies but the ones I do have occupy a lot of my
         time. I enjoy reading almost any well written story, though I have a
         penchant for fantasy, horror, and sci-fi (particularly dystopian novels
         such as
-        <b>1984</b>, <b>The Handmaid’s Tale</b>, and similar novels). I also
+        <b>1984</b>, <b>The Handmaid's Tale</b>, and similar novels). I also
         love a good revenge story (<b>The Count of Monte Cristo</b>,{" "}
         <b>Carrie</b>, <b>Rose Madder</b>, you get the idea.) I enjoy going
-        running, though I’ll admit, it has been a lot longer than I’d like to
+        running, though I'll admit, it has been a lot longer than I'd like to
         admit since I have been on a good one, unless you count chasing my
-        daughter in whatever silly game we’re playing!
+        daughter in whatever silly game we're playing!
       </>
     ),
     Paragraph(
@@ -114,18 +158,18 @@ const paragraphs = {
         been something about coding languages that has appealed to me since my
         young teenage years. I love the idea that through this medium I can
         create the sort of video games (and other cool stuff) that I loved and
-        grew up playing. Now that I’m a few months in, I am even more convinced
+        grew up playing. Now that I'm a few months in, I am even more convinced
         that software development is for me.
       </>
     ),
     Paragraph(
       <>
-        In lieu of a proper closing statement, I’ll leave you with one of my
+        In lieu of a proper closing statement, I'll leave you with one of my
         favourite quotes:
         <span className="quote">
-          “Don’t ever, for any reason, do anything, to anyone, for any reason,
+          “Don't ever, for any reason, do anything, to anyone, for any reason,
           ever, no matter what, no matter where, or who, or who you are with, or
-          where you are going, or where you’ve been, ever, for any reason,
+          where you are going, or where you've been, ever, for any reason,
           whatsoever.” Michael Scott
         </span>
       </>
@@ -208,7 +252,7 @@ const paragraphs = {
         information from the website server and check that information to
         determine if it is legitimate. If successful, the <b>CA</b> will send
         the website server back an unforgeable, signed certificate. Web browsers
-        automatically come with information about trusted <b>CA</b>’s and will
+        automatically come with information about trusted <b>CA</b>'s and will
         not accept a certificate from an unknown or untrusted <b>CA</b>.
       </>
     ),
@@ -255,7 +299,7 @@ const paragraphs = {
         >
           10,000 most common passwords
         </HTTPLink>
-        ) should be considered secure simply because they are longer. It’s
+        ) should be considered secure simply because they are longer. It's
         important to remember that some hackers try to hack accounts by using
         programs that reference lists of common passwords. Another method that
         is commonly used examines every possible combination of characters in an
@@ -337,7 +381,7 @@ const paragraphs = {
       <>
         <ul className="html-example">
           <li>
-            {"<HTML>"}There are several other elements, but I’m the most
+            {"<HTML>"}There are several other elements, but I'm the most
             important one. Without me the web page will not work. All other
             elements will be inside of me!{"</HTML>"}
           </li>
@@ -371,7 +415,7 @@ const paragraphs = {
       <>
         These examples show how plain <b>HTML</b> is laid out. <b>CSS</b> is
         typically used to apply style to these <b>HTML</b> elements. <b>CSS</b>{" "}
-        can be thought of as a programmer/web designer’s version of an artist’s
+        can be thought of as a programmer/web designer's version of an artist's
         paint brush. It allows us to style and design web pages by telling the{" "}
         <b>HTML</b> what to look like.
         <b>CSS</b> consists of several properties:
@@ -426,7 +470,7 @@ const paragraphs = {
           <li>
             {"<p>"}
             <span className="fn-hotpink fn-20px">
-              My font-size value was set to 20 pixels which is why I’m so big.
+              My font-size value was set to 20 pixels which is why I'm so big.
             </span>
             {"</p>"}
           </li>
@@ -465,7 +509,7 @@ const paragraphs = {
               {"<aside>"}
               <span className="fn-hotpink">
                 These CSS rules are what tell us how to look good, though I
-                don’t agree with the design choice of having all of our font
+                don't agree with the design choice of having all of our font
                 colours hot pink.
               </span>
               {"<aside>"}
@@ -489,6 +533,407 @@ const paragraphs = {
         <b>HTML</b>
         tutorial and after that, the <b>CSS</b> tutorial, both hosted on
         W3Schools, which is a great resource for beginners. Thanks for reading!
+      </>
+    ),
+  ],
+  post5: [<ReactMd fileName="http://localhost:3000/MD/post5.md" />],
+  post6: [
+    Paragraph(
+      <>
+        Recently, I built a React (read more here) application which involves
+        searching a database of books. The user moves books from those results
+        into different categories (shelves). Today I will explain how this
+        application works.
+      </>
+    ),
+    Paragraph(
+      <>
+        The home page contains the users saved books in the corresponding shelf
+        the book was saved to. The user navigates to the search page by clicking
+        on the plus icon at the bottom right of the main page.
+      </>
+    ),
+    Paragraph(
+      <>
+        The search page contains a search input. The user types in (this input
+        box) what they wish to search for. The page displays all book titles
+        that include the user's search input in their title.
+      </>
+    ),
+    Paragraph(
+      <>
+        When the search input is changed on the search page, the following
+        function is called (after a short delay to ensure typing has ceased):
+      </>
+    ),
+
+    Paragraph(
+      <div className="bg-code code-example">
+        <ul>
+          <span className="fn-green">
+            <li>
+              <br /> First, the function (displaySearchResults) takes in data on
+              all available books, and the users search input.
+            </li>
+          </span>
+          <li>
+            {" "}
+            <span className="fn-purple">export</span>
+            <span className="fn-dkblue"> const </span>
+            <span className="fn-yellow">displaySearchResults </span>= (
+            <span className="fn-ltblue">books</span>,
+            <span className="fn-ltblue"> searchInput</span>)
+            <span className="fn-dkblue">{" =>"}</span>
+            {" {"}
+          </li>
+          <br />
+          <span className="fn-green">
+            <li>
+              Second, the function filters out books if they do not include the
+              search input in their title. All letters are capitalized, and the
+              search input has any extra white space on either side removed to
+              obtain case insensitive matches.
+            </li>
+          </span>
+          <li>
+            <span className="fn-dkblue">let </span>
+            <span className="fn-ltblue">resultsFound</span> = [...
+            <span className="fn-ltblue">books</span>]
+            <span className="fn-yellow">.filter</span>((
+            <span className="fn-ltblue">book</span>)
+            <span className="fn-dkblue">{" =>"}</span> {"{"}
+          </li>
+          <span className="fn-purple"> return</span>(
+          <li>
+            <span className="fn-ltblue">book.title</span>.
+            <span className="fn-yellow">toUpperCase</span>().
+            <span className="fn-yellow">includes</span>(
+            <span className="fn-yellow">cleanSearchString</span>(
+            <span className="fn-ltblue">searchInput</span>)));<li>{"}"});</li>
+          </li>
+          <br />
+          <span className="fn-green">
+            <li> Third, the function sorts the results.</li>
+          </span>
+          <li>
+            <span className="fn-ltblue">resultsFound </span> =
+            <span className="fn-yellow"> sortBySearchedText</span>(
+            <span className="fn-ltblue">resultsFound</span>,
+            <span className="fn-ltblue"> searchInput</span>
+            );
+          </li>
+          <span className="fn-green">
+            <li>
+              <br />
+              Finally, the function outputs the sorted results and React
+              displays them on the page.
+            </li>
+          </span>
+          <li>
+            <span className="fn-purple">return </span>
+            <span className="fn-ltblue">resultsFound</span>;<li>{"}"}</li>
+          </li>
+        </ul>
+      </div>
+    ),
+    Paragraph(
+      <>
+        The sorting of the books before rendering them is important. Users
+        expect searches to display the most relevant results first.
+      </>
+    ),
+    Paragraph(
+      <>
+        The displaySearchResults function calls the following function to sort
+        the books:
+      </>
+    ),
+    Paragraph(
+      <div className="bg-code code-example">
+        <ul>
+          <li>
+            <br />
+            <span className="fn-green">
+              First, the function (sortBySearchedText) receives the search
+              results and the search input.
+            </span>
+          </li>
+          <li>
+            <span className="fn-dkblue">const</span>
+            <span className="fn-ltblue"> sortBySearchedText </span>= (
+            <span className="fn-ltblue">resultsFound</span>,
+            <span className="fn-ltblue"> searchInput</span>)
+            <span className="fn-dkblue">{" =>"}</span> {"{"}
+          </li>
+          <span className="fn-green">
+            <li>
+              <br />
+              Second, the function capitalizes the titles of all books to avoid
+              case sensitive sorting.
+            </li>
+          </span>
+          <li>
+            {" "}
+            <li>
+              <span className="fn-purple">for </span>(
+              <span className="fn-dkblue">let </span>
+              <span className="fn-ltblue">book </span>
+              <span className="fn-dkblue">of </span>
+              <span className="fn-ltblue">resultsFound</span>) {"{"}
+            </li>
+            <span className="fn-ltblue">book.formattedTitle </span>=
+            <span className="fn-yellow"> formatForSorting</span>(
+            <span className="fn-ltblue">book.title</span>);
+          </li>
+          {"}"}
+          <li>
+            <br />
+            <span className="fn-green">
+              Third, the sort function sorts the results.
+            </span>
+          </li>
+          <li>
+            <span className="fn-ltblue">resultsFound</span>.
+            <span className="fn-yellow">sort</span>
+            ((
+            <span className="fn-ltblue">book1, book2</span>)
+            <span className="fn-dkblue">{" =>"}</span>
+            {" {"}
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-ltblue">book1Title </span>=
+            <span className="fn-ltblue"> book1</span>.
+            <span className="fn-ltblue">formattedTitle</span>;
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-ltblue">book2Title </span>=
+            <span className="fn-ltblue"> book2.formattedTitle</span>;
+          </li>
+          <span className="fn-dkblue">const </span>
+          <span className="fn-ltblue">shortestBookTitle </span>=
+          <span className="fn-yellow"> getShortestString</span>(
+          <span className="fn-ltblue">book1Title, book2Title</span>
+          );
+          <li>
+            <br />
+            <span className="fn-green">
+              If one title has a higher sort priority (determined here by
+              whether or not the first word in the book title includes the
+              search terms) it will tell the sorting function to sort it before
+              other books with lower priority.
+            </span>
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-yellow">sortPriority </span>=
+            <span className="fn-yellow"> getSortPriority</span>(
+            <span className="fn-ltblue">book1, book2, searchInput</span>);
+          </li>
+          <span className="fn-purple">if </span>(
+          <span className="fn-ltblue">sortPriority </span>
+          !== 0) {" {"}
+          <li>
+            <span className="fn-purple">return </span>
+            <span className="fn-ltblue">sortPriority</span>;
+          </li>
+          {"}"}
+          <li>
+            <br />
+            <span className="fn-green">
+              If neither book possesses a higher priority based on the prior
+              criteria, the function sorts them in alphabetical order.
+            </span>
+          </li>
+          <li>
+            <span className="fn-purple">for </span>(
+            <span className="fn-dkblue">let </span>
+            <span className="fn-ltblue">i </span>= 0; i {" < "}
+            <span className="fn-ltblue">shortestBookTitle.length</span>;
+            <span className="fn-ltblue"> i++</span>) {"{"}
+          </li>
+          <li>
+            <span className="fn-purple">if </span>(
+            <span className="fn-ltblue">book1Title[i] </span>
+            !==
+            <span className="fn-ltblue"> book2Title[i]</span>) {"{"}
+          </li>
+          <li>
+            <span className="fn-purple">return</span>{" "}
+            <span className="fn-ltblue">book1Title</span>.
+            <span className="fn-yellow">charCodeAt</span>(
+            <span className="fn-ltblue">i</span>) -{" "}
+            <span className="fn-ltblue">book2Title</span>.
+            <span className="fn-yellow">charCodeAt</span>(
+            <span className="fn-ltblue">i</span>);
+          </li>
+          <li>{"}"}</li>
+          <li>{"}"}</li>
+          <li>{"}"});</li>
+          <li>
+            <br />
+            <span className="fn-green">
+              Finally, the sorted search results are output back to the
+              displaySearchResults function.
+            </span>
+          </li>
+          <span className="pruple">return</span>{" "}
+          <span className="fn-ltblue">resultsFound</span>;<li>{"}"};</li>
+        </ul>
+      </div>
+    ),
+    Paragraph(
+      <>
+        The following shows a simplified view of the flow from sending the book
+        and search result data, to React receiving and displaying the results:
+      </>
+    ),
+    Paragraph(
+      <>
+        The results are now displayed in the web browser window. The user clicks
+        on books. A click opens a menu that contains options that will send the
+        book to a bookshelf, or remove it from a shelf, when clicked on.
+      </>
+    ),
+    Paragraph(
+      <>
+        The main page contains three shelves:
+        <ul>
+          <li>Read</li>
+          <li>Want to Read</li>
+          <li>Currently Reading</li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        When a category is selected from the menu, which opens when a book is
+        clicked, the following function is called:
+      </>
+    ),
+    Paragraph(
+      <div className="bg-code code-example">
+        <ul>
+          <li>
+            <span className="fn-green">
+              <br />
+              // First, the function (updateBookShelfStatus) is called and
+              receives the data on the book that was clicked.
+            </span>
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-ltblue">updateBookShelfStatus </span>=
+            <span className="fn-dkblue"> async</span>(
+            <span className="fn-ltblue">event</span>){" => "}
+            {"{"}
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-ltblue">valueToUpdateWith </span>=
+            <span className="fn-ltblue"> event.target.value</span>;
+          </li>
+          <br />
+          <li>
+            <span className="fn-green">
+              // Second, the function checks to make sure the function will exit
+              on the initial click on the book, and if they click on an invalid
+              option.
+            </span>
+          </li>
+          <li>
+            <span className="fn-purple">if </span>(
+            <span className="fn-ltblue">valueToUpdateWith </span>
+            ===
+            <span className="fn-orange"> "move"</span>) {"{"}
+          </li>
+          <span className="fn-purple">return</span>;<li>{"}"}</li>
+          <br />
+          <li>
+            <span className="fn-green">
+              // Third, the function contacts the database (usually a server
+              online, but in this case, a local file) and tells it to change the
+              shelf location data to the shelf location that was clicked on.
+            </span>
+          </li>
+          <li>
+            <span className="fn-dkblue">const </span>
+            <span className="fn-ltblue">response </span>=
+            <span className="fn-purple"> await </span>
+            <span className="fn-yellow">fetch</span>(
+            <span className="fn-orange">`http://localhost:3001/books/$</span>
+            {"{"}
+            <span className="fn-ltblue">id</span>
+            {"}"}
+            <span className="fn-orange">`</span>, {"{"}
+          </li>
+          <li>
+            <span className="fn-ltblue">method</span>:
+            <span className="fn-orange"> "PATCH"</span>,
+          </li>{" "}
+          <li>
+            <span className="fn-ltblue">headers</span>: {"{"}
+            <span className="fn-orange"> "Content-Type"</span>:
+            <span className="fn-ltblue">"application/json"</span>
+            {"}"},
+          </li>{" "}
+          <li>
+            <span className="fn-ltblue">body</span>:
+            <span className="fn-ltblue"> JSON</span>.
+            <span className="fn-yellow">stringify</span>({"{"}
+          </li>{" "}
+          <li>
+            <span className="fn-ltblue">shelfStatus</span>:
+            <span className="fn-ltblue"> valueToUpdateWith</span>,
+          </li>
+          <li>{"}"}),</li> <li>{"}"});</li>
+          <span className="fn-green">
+            <br />
+            Finally, the function calls another function (getBooks). getBooks()
+            obtains a fresh copy of the data, which contains the changes made,
+            from the database.
+          </span>
+          <span className="fn-yellow">getBooks</span>(
+          <span className="fn-ltblue">updateBooks</span>
+          );
+          {"}"};
+          <li>
+            <br />
+            <span className="fn-green">
+              // React now displays the updated data.
+            </span>
+          </li>
+        </ul>
+      </div>
+    ),
+    Paragraph(
+      <>
+        The following is a simplified view of the process from clicking on a
+        book option, to updating the data being displayed:
+      </>
+    ),
+    Paragraph(
+      <>
+        The following is a simplified view of the process from clicking on a
+        book option, to updating the data being displayed:
+      </>
+    ),
+    Paragraph(
+      <>
+        The homepage now displays the bookshelves with all books previously
+        selected in their respective categories. The books can be selected and
+        removed/categorized on the homepage, exactly the same as they can on the
+        search page.
+      </>
+    ),
+    Paragraph(
+      <>
+        I explained how the database search works with React to display a list
+        of relevant results. I then explained how to interact with the results
+        to categorize specific books into book shelves. I hope you learned
+        something new by reading through this article and are inspired to try
+        something similar.
       </>
     ),
   ],
@@ -543,10 +988,27 @@ const otherText = {
     citations: [],
   },
   post5: {
-    title: `HTML, CSS, and you`,
-    description: `I give a basic introduction on HTML & CSS.`,
-    date: 1622347140,
-    headers: [`Building with HTML`, `Styling with CSS`, `Conclusion`],
+    title: `Master Saga Frontier`,
+    description: `I explain how to master the game Saga Frontier.`,
+    date: 1622865540,
+    headers: [``],
+    citations: [],
+  },
+  post6: {
+    title: `MITTLibrary`,
+    description: `I give an overview of a book library app I made in React.`,
+    date: 1623562740,
+    headers: [
+      `App overview`,
+      `Obtaining and displaying search results`,
+      `Sorting the search results`,
+      `Search results flow`,
+      `Viewing and categorizing books`,
+      `Moving books`,
+      `Shelving books flow`,
+      `The final result`,
+      `Conclusion`,
+    ],
     citations: [],
   },
 };
@@ -634,28 +1096,44 @@ const posts = [
   },
   {
     id: 5,
-    fullPost: (
-      <>
-        <ReactMd fileName="http://localhost:3000/MD/post5.md" />
-      </>
-    ),
+    fullPost: paragraphs.post5[0],
   },
   {
     id: 6,
     fullPost: (
       <Container maxWidth="md" id="post-body">
-        {Title(otherText.post4.title)}
-        {PostDate(otherText.post4.date)}
+        {Title(otherText.post6.title)}
+        {PostDate(otherText.post6.date)}
         {Author("Andrew Borondia")}
-        {paragraphs.post4[0]}
-        {ParagraphHeader(otherText.post4.headers[0])}
-        {paragraphs.post4[1]}
-        {paragraphs.post4[2]}
-        {ParagraphHeader(otherText.post4.headers[1])}
-        {paragraphs.post4[3]}
-        {ParagraphHeader(otherText.post4.headers[2])}
-        {paragraphs.post4[4]}
-        {paragraphs.post4[5]}
+        {paragraphs.post6[0]}
+        {ParagraphHeader(otherText.post6.headers[0])}
+        {paragraphs.post6[1]}
+        {paragraphs.post6[2]}
+        {ParagraphHeader(otherText.post6.headers[1])}
+        {paragraphs.post6[3]}
+        {paragraphs.post6[4]}
+        {ParagraphHeader(otherText.post6.headers[2])}
+        {paragraphs.post6[5]}
+        {paragraphs.post6[6]}
+        {paragraphs.post6[7]}
+        {ParagraphHeader(otherText.post6.headers[3])}
+        {paragraphs.post6[8]}
+        {Image(images.post6.img1)}
+        {ParagraphHeader(otherText.post6.headers[4])}
+        {paragraphs.post6[9]}
+        {Image(images.post6.img2)}
+        {ParagraphHeader(otherText.post6.headers[5])}
+        {paragraphs.post6[10]}
+        {paragraphs.post6[11]}
+        {paragraphs.post6[12]}
+        {ParagraphHeader(otherText.post6.headers[6])}
+        {paragraphs.post6[13]}
+        {Image(images.post6.img3)}
+        {ParagraphHeader(otherText.post6.headers[7])}
+        {paragraphs.post6[14]}
+        {Image(images.post6.img4)}
+        {ParagraphHeader(otherText.post6.headers[8])}
+        {paragraphs.post6[15]}
       </Container>
     ),
   },

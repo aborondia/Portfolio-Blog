@@ -49,12 +49,28 @@ margin-bottom: 1rem;
 padding: .5rem 0;
 }
 
+#post-body .code-example ul li{
+  list-style: none;
+}
+
+.code-example{
+  color: white;
+}
+
 .bg-blue{
   background-color: blue;
 }
 
 .bg-yellow{
   background-color: yellow;
+}
+
+.bg-hotpink{
+  background-color: hotpink;
+}
+
+.bg-code{
+  background-color: hsl(0,0%,12%);
 }
 
 .fn-bold{
@@ -65,14 +81,30 @@ padding: .5rem 0;
   font-style: italic;
 }
 
-.bg-hotpink{
-  background-color: hotpink;
+.fn-20px{
+  font-size: 20px;
 }
 
 .fn-hotpink{
   color: hotpink;
 }
 
-.fn-20px{
-  font-size: 20px;
+.fn-ltblue{
+  color: hsl(206,76%,49%);
+}
+
+.fn-dkblue{
+  color: hsl(208,63%,51%);
+}
+.fn-purple{
+  color: hsl(346,41%,61%);
+}
+.fn-green{
+  color: hsl(132,34%,34%);
+}
+.fn-yellow{
+  color: hsl(42,72%,42%);
+}
+.fn-orange{
+  color: hsl(17,34%,57%);
 }
