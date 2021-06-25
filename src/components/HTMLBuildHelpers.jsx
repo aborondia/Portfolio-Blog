@@ -1,6 +1,6 @@
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import {Link as HTTPLink} from '@material-ui/core';
+import { Link as HTTPLink } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 export const Title = (content) => {
@@ -17,25 +17,27 @@ export const Title = (content) => {
   );
 };
 
-export const Author = (authorName)=>{
-  return <Link to="./about-me" className='author'>by {authorName}</Link>
+export const Author = (authorName) => {
+  return (
+    <Link to="./about-me" className="author">
+      {authorName}
+    </Link>
+  );
+};
 
-}
-
-export const ParagraphHeader = (content)=>{
+export const ParagraphHeader = (content) => {
   return (
     <Typography
-      className="title"
       display="block"
       variant="h4"
       color="secondary"
       component="div"
-      className='paragraph-header'
+      className="paragraph-header"
     >
       {content}
     </Typography>
   );
-}
+};
 
 export const Description = (content) => {
   return (
@@ -71,10 +73,24 @@ export const Paragraph = (paragraph) => {
       variant="body1"
       color="textPrimary"
       component="div"
-      className='paragraph'
+      className="paragraph"
     >
       {paragraph}
     </Typography>
+  );
+};
+
+export const EmailAddress = (address) => {
+  return (
+    <HTTPLink
+      display="inline"
+      href={`mailto:${address}`}
+      alt="contact me"
+      color="primary"
+      variant="caption"
+    >
+      {address}
+    </HTTPLink>
   );
 };
 
@@ -82,17 +98,22 @@ export const Image = (image) => {
   return (
     <Container className="image-container">
       <img src={image.src} alt={image.alt} />
-      <Typography className='caption' variant="caption" color="textSecondary" component="div">
+      <Typography
+        className="caption"
+        variant="caption"
+        color="textSecondary"
+        component="div"
+      >
         {image.caption.text}
         <HTTPLink
-            display="block"
-            to={image.caption.link}
-            alt=""
-            color="primary"
-            variant="caption"
-          >
-            {image.caption.link}
-          </HTTPLink>
+          display="block"
+          to={image.caption.link}
+          alt=""
+          color="primary"
+          variant="caption"
+        >
+          {image.caption.link}
+        </HTTPLink>
       </Typography>
     </Container>
   );

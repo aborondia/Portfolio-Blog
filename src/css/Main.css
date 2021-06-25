@@ -1,0 +1,33 @@
+#main-container{
+  max-width: fit-content;
+}
+
+#main-container .title{
+  margin-left: 4rem;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#card-container .preview-card:hover {
+  cursor: pointer;
+}
+
+#card-container .preview-card .card-media {
+  margin: 1rem 0;
+  height: 300px;
+  width: 300px;
+}
+
+.preview-card {
+  flex-basis: 40%;
+  margin: 1rem 0 0 0;
+  padding: 1rem;
+}
+
+.preview-card div {
+  padding: 0;
+}

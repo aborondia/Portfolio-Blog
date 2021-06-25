@@ -1,0 +1,11 @@
+#navbar .title{
+  font-size: 2rem;
+}
+
+#navbar .toolbar a span div{
+font-size: 1.25rem;
+}
+
+#navbar > div{
+  text-align: center;
+margin: auto;}

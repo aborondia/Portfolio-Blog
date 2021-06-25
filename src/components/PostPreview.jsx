@@ -1,26 +1,31 @@
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import { getPostPreview } from "../Posts";
-import "../css/PostPreview.css";
-import { Description } from "./HTMLBuildHelpers";
+import { Description, ParagraphHeader } from "./HTMLBuildHelpers";
+import { useHistory } from "react-router-dom";
 
 const PostPreview = ({ postId }) => {
+  const history = useHistory();
   const { title, description, date, image } = getPostPreview(postId);
-console.log(getPostPreview(postId))
+  const noImageSrc = "images/no-image.svg";
+
+  const goToPost = (id) => {
+    history.push({
+      pathname: "/blog/post",
+      search: `id=${id}`,
+    });
+  };
+
   return (
-    <Card className="preview-card">
-      <CardHeader
-        className="card-header"
-        title={title}
-        subheader={date}
+    <Card className="preview-card" onClick={() => goToPost(postId)}>
+      <CardHeader className="card-header" title={ParagraphHeader(title)} subheader={date} />
+      <CardMedia
+        className="card-media"
+        image={image ? image.src : noImageSrc}
+        title={image ? image.alt : ""}
       />
-      <CardMedia className="card-media" image={image.src} title={image.alt} />
       {Description(description)}
-      <Button color="secondary" variant="contained" aria-label="go to post">
-        MORE
-      </Button>
     </Card>
   );
 };

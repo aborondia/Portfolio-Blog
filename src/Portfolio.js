@@ -6,9 +6,9 @@ import RecentPosts from "./components/RecentPosts";
 import Projects from "./components/Projects";
 import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
-import Contact from './components/Contact';
+import Contact from "./components/Contact";
+import Post from "./components/Post";
 import "./css/Post.css";
-
 
 const App = () => {
   return (
@@ -20,23 +20,29 @@ const App = () => {
             <Main />
           </Route>
 
-          <Route  exact path="/recent-posts">
+          <Route exact path="/recent-posts">
             <RecentPosts />
           </Route>
 
-          <Route path="/blog">
+          <Route exact path="/blog">
             <Blog />
           </Route>
 
-          <Route path="/projects">
+          <Route exact path="/projects">
             <Projects />
           </Route>
 
-          <Route path="/about-me">
-            <AboutMe/>
+          <Route exact path="/about-me">
+            <AboutMe />
           </Route>
 
-          <Route path="/contact"><Contact /></Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+
+          <Route path="/blog/post">
+            <Post />
+          </Route>
         </Switch>
       </main>
     </>
