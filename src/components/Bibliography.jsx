@@ -25,8 +25,8 @@ const Bibliography = ({ citations }) => {
               color="textSecondary"
               component="div"
             >
-              {citation.author}. {citation.date}. {citation.document}.{" "}
-              {citation.retrieved}, from{" "}
+              {citation.author}, ({citation.date}). {citation.document},{" "}
+              (accessed {citation.retrieved}), from{" "}
               <HTTPLink to={citation.link}>{citation.link}</HTTPLink>
             </Typography>
           </Container>

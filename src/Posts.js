@@ -119,6 +119,40 @@ const images = {
       },
     },
   },
+  post7: {
+    img1: {
+      src: "/images/post7/image1.png",
+      alt: "A picture of a game controller.",
+      caption: {
+        text: `by achmad mulyana from the Noun Project`,
+        link: `https://thenounproject.com/term/love-gaming/2233466/`,
+      },
+    },
+    img2: {
+      src: "/images/post7/image2.png",
+      alt: "Code example in Gamemaker studio by Holland Mill.",
+      caption: {
+        text: `by Holland Mill`,
+        link: `https://commons.wikimedia.org/wiki/File:GameMaker_Studio_voorbeeldcode.png`,
+      },
+    },
+    img3: {
+      src: "/images/post7/image3.png",
+      alt: "Unity logo",
+      caption: {
+        text: `Unity Trek & Unity3D.com`,
+        link: `https://commons.wikimedia.org/wiki/File:Powered_by_Unity_logo.png`,
+      },
+    },
+    img4: {
+      src: "/images/post7/image4.jpg",
+      alt: "RPGMaker MV logo.",
+      caption: {
+        text: `by steamXO`,
+        link: `https://www.flickr.com/photos/158561476@N06/45699072272`,
+      },
+    },
+  },
 };
 const paragraphs = {
   post1: [
@@ -1555,73 +1589,73 @@ const paragraphs = {
     Paragraph(
       <div className="bg-code code-example">
         <code>
-        <ul>
-          <span className="fn-green">
+          <ul>
+            <span className="fn-green">
+              <li>
+                <br /> First, the function (displaySearchResults) takes in data
+                on all available books, and the users search input.
+              </li>
+            </span>
             <li>
-              <br /> First, the function (displaySearchResults) takes in data on
-              all available books, and the users search input.
+              {" "}
+              <span className="fn-purple">export</span>
+              <span className="fn-dkblue"> const </span>
+              <span className="fn-yellow">displaySearchResults </span>= (
+              <span className="fn-ltblue">books</span>,
+              <span className="fn-ltblue"> searchInput</span>)
+              <span className="fn-dkblue">{" =>"}</span>
+              {" {"}
             </li>
-          </span>
-          <li>
-            {" "}
-            <span className="fn-purple">export</span>
-            <span className="fn-dkblue"> const </span>
-            <span className="fn-yellow">displaySearchResults </span>= (
-            <span className="fn-ltblue">books</span>,
-            <span className="fn-ltblue"> searchInput</span>)
-            <span className="fn-dkblue">{" =>"}</span>
-            {" {"}
-          </li>
-          <br />
-          <span className="fn-green">
+            <br />
+            <span className="fn-green">
+              <li>
+                Second, the function filters out books if they do not include
+                the search input in their title. All letters are capitalized,
+                and the search input has any extra white space on either side
+                removed to obtain case insensitive matches.
+              </li>
+            </span>
             <li>
-              Second, the function filters out books if they do not include the
-              search input in their title. All letters are capitalized, and the
-              search input has any extra white space on either side removed to
-              obtain case insensitive matches.
+              <span className="fn-dkblue">let </span>
+              <span className="fn-ltblue">resultsFound</span> = [...
+              <span className="fn-ltblue">books</span>]
+              <span className="fn-yellow">.filter</span>((
+              <span className="fn-ltblue">book</span>)
+              <span className="fn-dkblue">{" =>"}</span> {"{"}
             </li>
-          </span>
-          <li>
-            <span className="fn-dkblue">let </span>
-            <span className="fn-ltblue">resultsFound</span> = [...
-            <span className="fn-ltblue">books</span>]
-            <span className="fn-yellow">.filter</span>((
-            <span className="fn-ltblue">book</span>)
-            <span className="fn-dkblue">{" =>"}</span> {"{"}
-          </li>
-          <span className="fn-purple"> return</span>(
-          <li>
-            <span className="fn-ltblue">book.title</span>.
-            <span className="fn-yellow">toUpperCase</span>().
-            <span className="fn-yellow">includes</span>(
-            <span className="fn-yellow">cleanSearchString</span>(
-            <span className="fn-ltblue">searchInput</span>)));
-          </li>
-          <li>{"}"});</li>
-          <br />
-          <span className="fn-green">
-            <li> Third, the function sorts the results.</li>
-          </span>
-          <li>
-            <span className="fn-ltblue">resultsFound </span> =
-            <span className="fn-yellow"> sortBySearchedText</span>(
-            <span className="fn-ltblue">resultsFound</span>,
-            <span className="fn-ltblue"> searchInput</span>
-            );
-          </li>
-          <span className="fn-green">
+            <span className="fn-purple"> return</span>(
             <li>
-              <br />
-              Finally, the function outputs the sorted results and React
-              displays them on the page.
+              <span className="fn-ltblue">book.title</span>.
+              <span className="fn-yellow">toUpperCase</span>().
+              <span className="fn-yellow">includes</span>(
+              <span className="fn-yellow">cleanSearchString</span>(
+              <span className="fn-ltblue">searchInput</span>)));
             </li>
-          </span>
-          <li>
-            <span className="fn-purple">return </span>
-            <span className="fn-ltblue">resultsFound</span>;
-          </li>
-          <li>{"}"}</li>
-        </ul>
+            <li>{"}"});</li>
+            <br />
+            <span className="fn-green">
+              <li> Third, the function sorts the results.</li>
+            </span>
+            <li>
+              <span className="fn-ltblue">resultsFound </span> =
+              <span className="fn-yellow"> sortBySearchedText</span>(
+              <span className="fn-ltblue">resultsFound</span>,
+              <span className="fn-ltblue"> searchInput</span>
+              );
+            </li>
+            <span className="fn-green">
+              <li>
+                <br />
+                Finally, the function outputs the sorted results and React
+                displays them on the page.
+              </li>
+            </span>
+            <li>
+              <span className="fn-purple">return </span>
+              <span className="fn-ltblue">resultsFound</span>;
+            </li>
+            <li>{"}"}</li>
+          </ul>
         </code>
       </div>
     ),
@@ -1640,136 +1674,136 @@ const paragraphs = {
     Paragraph(
       <div className="bg-code code-example">
         <code>
-        <ul>
-          <li>
-            <br />
-            <span className="fn-green">
-              First, the function (sortBySearchedText) receives the search
-              results and the search input.
-            </span>
-          </li>
-          <li>
-            <span className="fn-dkblue">const</span>
-            <span className="fn-ltblue"> sortBySearchedText </span>= (
-            <span className="fn-ltblue">resultsFound</span>,
-            <span className="fn-ltblue"> searchInput</span>)
-            <span className="fn-dkblue">{" =>"}</span> {"{"}
-          </li>
-          <span className="fn-green">
+          <ul>
             <li>
               <br />
-              Second, the function capitalizes the titles of all books to avoid
-              case sensitive sorting.
+              <span className="fn-green">
+                First, the function (sortBySearchedText) receives the search
+                results and the search input.
+              </span>
             </li>
-          </span>
-          <li>
-            <span className="fn-purple">for </span>(
-            <span className="fn-dkblue">let </span>
-            <span className="fn-ltblue">book </span>
-            <span className="fn-dkblue">of </span>
-            <span className="fn-ltblue">resultsFound</span>) {"{"}
-          </li>
-          <li>
-            <span className="fn-ltblue">book.formattedTitle </span>=
-            <span className="fn-yellow"> formatForSorting</span>(
-            <span className="fn-ltblue">book.title</span>);
-          </li>
-          {"}"}
-          <li>
-            <br />
+            <li>
+              <span className="fn-dkblue">const</span>
+              <span className="fn-ltblue"> sortBySearchedText </span>= (
+              <span className="fn-ltblue">resultsFound</span>,
+              <span className="fn-ltblue"> searchInput</span>)
+              <span className="fn-dkblue">{" =>"}</span> {"{"}
+            </li>
             <span className="fn-green">
-              Third, the sort function sorts the results.
+              <li>
+                <br />
+                Second, the function capitalizes the titles of all books to
+                avoid case sensitive sorting.
+              </li>
             </span>
-          </li>
-          <li>
-            <span className="fn-ltblue">resultsFound</span>.
-            <span className="fn-yellow">sort</span>
-            ((
-            <span className="fn-ltblue">book1, book2</span>)
-            <span className="fn-dkblue">{" =>"}</span>
-            {" {"}
-          </li>
-          <li>
+            <li>
+              <span className="fn-purple">for </span>(
+              <span className="fn-dkblue">let </span>
+              <span className="fn-ltblue">book </span>
+              <span className="fn-dkblue">of </span>
+              <span className="fn-ltblue">resultsFound</span>) {"{"}
+            </li>
+            <li>
+              <span className="fn-ltblue">book.formattedTitle </span>=
+              <span className="fn-yellow"> formatForSorting</span>(
+              <span className="fn-ltblue">book.title</span>);
+            </li>
+            {"}"}
+            <li>
+              <br />
+              <span className="fn-green">
+                Third, the sort function sorts the results.
+              </span>
+            </li>
+            <li>
+              <span className="fn-ltblue">resultsFound</span>.
+              <span className="fn-yellow">sort</span>
+              ((
+              <span className="fn-ltblue">book1, book2</span>)
+              <span className="fn-dkblue">{" =>"}</span>
+              {" {"}
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-ltblue">book1Title </span>=
+              <span className="fn-ltblue"> book1</span>.
+              <span className="fn-ltblue">formattedTitle</span>;
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-ltblue">book2Title </span>=
+              <span className="fn-ltblue"> book2.formattedTitle</span>;
+            </li>
             <span className="fn-dkblue">const </span>
-            <span className="fn-ltblue">book1Title </span>=
-            <span className="fn-ltblue"> book1</span>.
-            <span className="fn-ltblue">formattedTitle</span>;
-          </li>
-          <li>
-            <span className="fn-dkblue">const </span>
-            <span className="fn-ltblue">book2Title </span>=
-            <span className="fn-ltblue"> book2.formattedTitle</span>;
-          </li>
-          <span className="fn-dkblue">const </span>
-          <span className="fn-ltblue">shortestBookTitle </span>=
-          <span className="fn-yellow"> getShortestString</span>(
-          <span className="fn-ltblue">book1Title, book2Title</span>
-          );
-          <li>
-            <br />
-            <span className="fn-green">
-              If one title has a higher sort priority (determined here by
-              whether or not the first word in the book title includes the
-              search terms) it will tell the sorting function to sort it before
-              other books with lower priority.
-            </span>
-          </li>
-          <li>
-            <span className="fn-dkblue">const </span>
-            <span className="fn-yellow">sortPriority </span>=
-            <span className="fn-yellow"> getSortPriority</span>(
-            <span className="fn-ltblue">book1, book2, searchInput</span>);
-          </li>
-          <span className="fn-purple">if </span>(
-          <span className="fn-ltblue">sortPriority </span>
-          !== 0) {" {"}
-          <li>
-            <span className="fn-purple">return </span>
-            <span className="fn-ltblue">sortPriority</span>;
-          </li>
-          {"}"}
-          <li>
-            <br />
-            <span className="fn-green">
-              If neither book possesses a higher priority based on the prior
-              criteria, the function sorts them in alphabetical order.
-            </span>
-          </li>
-          <li>
-            <span className="fn-purple">for </span>(
-            <span className="fn-dkblue">let </span>
-            <span className="fn-ltblue">i </span>= 0; i {" < "}
-            <span className="fn-ltblue">shortestBookTitle.length</span>;
-            <span className="fn-ltblue"> i++</span>) {"{"}
-          </li>
-          <li>
+            <span className="fn-ltblue">shortestBookTitle </span>=
+            <span className="fn-yellow"> getShortestString</span>(
+            <span className="fn-ltblue">book1Title, book2Title</span>
+            );
+            <li>
+              <br />
+              <span className="fn-green">
+                If one title has a higher sort priority (determined here by
+                whether or not the first word in the book title includes the
+                search terms) it will tell the sorting function to sort it
+                before other books with lower priority.
+              </span>
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-yellow">sortPriority </span>=
+              <span className="fn-yellow"> getSortPriority</span>(
+              <span className="fn-ltblue">book1, book2, searchInput</span>);
+            </li>
             <span className="fn-purple">if </span>(
-            <span className="fn-ltblue">book1Title[i] </span>
-            !==
-            <span className="fn-ltblue"> book2Title[i]</span>) {"{"}
-          </li>
-          <li>
-            <span className="fn-purple">return</span>{" "}
-            <span className="fn-ltblue">book1Title</span>.
-            <span className="fn-yellow">charCodeAt</span>(
-            <span className="fn-ltblue">i</span>) -{" "}
-            <span className="fn-ltblue">book2Title</span>.
-            <span className="fn-yellow">charCodeAt</span>(
-            <span className="fn-ltblue">i</span>);
-          </li>
-          <li>{"}"}</li>
-          <li>{"}"}</li>
-          <li>{"}"});</li>
-          <li>
-            <br />
-            <span className="fn-green">
-              Finally, the sorted search results are output back to the
-              displaySearchResults function.
-            </span>
-          </li>
-          <span className="pruple">return</span>{" "}
-          <span className="fn-ltblue">resultsFound</span>;<li>{"}"};</li>
-        </ul>
+            <span className="fn-ltblue">sortPriority </span>
+            !== 0) {" {"}
+            <li>
+              <span className="fn-purple">return </span>
+              <span className="fn-ltblue">sortPriority</span>;
+            </li>
+            {"}"}
+            <li>
+              <br />
+              <span className="fn-green">
+                If neither book possesses a higher priority based on the prior
+                criteria, the function sorts them in alphabetical order.
+              </span>
+            </li>
+            <li>
+              <span className="fn-purple">for </span>(
+              <span className="fn-dkblue">let </span>
+              <span className="fn-ltblue">i </span>= 0; i {" < "}
+              <span className="fn-ltblue">shortestBookTitle.length</span>;
+              <span className="fn-ltblue"> i++</span>) {"{"}
+            </li>
+            <li>
+              <span className="fn-purple">if </span>(
+              <span className="fn-ltblue">book1Title[i] </span>
+              !==
+              <span className="fn-ltblue"> book2Title[i]</span>) {"{"}
+            </li>
+            <li>
+              <span className="fn-purple">return</span>{" "}
+              <span className="fn-ltblue">book1Title</span>.
+              <span className="fn-yellow">charCodeAt</span>(
+              <span className="fn-ltblue">i</span>) -{" "}
+              <span className="fn-ltblue">book2Title</span>.
+              <span className="fn-yellow">charCodeAt</span>(
+              <span className="fn-ltblue">i</span>);
+            </li>
+            <li>{"}"}</li>
+            <li>{"}"}</li>
+            <li>{"}"});</li>
+            <li>
+              <br />
+              <span className="fn-green">
+                Finally, the sorted search results are output back to the
+                displaySearchResults function.
+              </span>
+            </li>
+            <span className="pruple">return</span>{" "}
+            <span className="fn-ltblue">resultsFound</span>;<li>{"}"};</li>
+          </ul>
         </code>
       </div>
     ),
@@ -1805,97 +1839,98 @@ const paragraphs = {
     Paragraph(
       <div className="bg-code code-example">
         <code>
-        <ul>
-          <li>
+          <ul>
+            <li>
+              <span className="fn-green">
+                <br />
+                First, the function (updateBookShelfStatus) is called and
+                receives the data on the book that was clicked.
+              </span>
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-ltblue">updateBookShelfStatus </span>=
+              <span className="fn-dkblue"> async</span>(
+              <span className="fn-ltblue">event</span>){" => "}
+              {"{"}
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-ltblue">valueToUpdateWith </span>=
+              <span className="fn-ltblue"> event.target.value</span>;
+            </li>
+            <br />
+            <li>
+              <span className="fn-green">
+                Second, the function checks to make sure the function will exit
+                on the initial click on the book, and if they click on an
+                invalid option.
+              </span>
+            </li>
+            <li>
+              <span className="fn-purple">if </span>(
+              <span className="fn-ltblue">valueToUpdateWith </span>
+              ===
+              <span className="fn-orange"> "move"</span>) {"{"}
+            </li>
+            <span className="fn-purple">return</span>;<li>{"}"}</li>
+            <br />
+            <li>
+              <span className="fn-green">
+                Third, the function contacts the database (usually a server
+                online, but in this case, a local file) and tells it to change
+                the shelf location data to the shelf location that was clicked
+                on.
+              </span>
+            </li>
+            <li>
+              <span className="fn-dkblue">const </span>
+              <span className="fn-ltblue">response </span>=
+              <span className="fn-purple"> await </span>
+              <span className="fn-yellow">fetch</span>(
+              <span className="fn-orange">`http://localhost:3001/books/$</span>
+              {"{"}
+              <span className="fn-ltblue">id</span>
+              {"}"}
+              <span className="fn-orange">`</span>, {"{"}
+            </li>
+            <li>
+              <span className="fn-ltblue">method</span>:
+              <span className="fn-orange"> "PATCH"</span>,
+            </li>{" "}
+            <li>
+              <span className="fn-ltblue">headers</span>: {"{"}
+              <span className="fn-orange"> "Content-Type"</span>:
+              <span className="fn-ltblue">"application/json"</span>
+              {"}"},
+            </li>{" "}
+            <li>
+              <span className="fn-ltblue">body</span>:
+              <span className="fn-ltblue"> JSON</span>.
+              <span className="fn-yellow">stringify</span>({"{"}
+            </li>{" "}
+            <li>
+              <span className="fn-ltblue">shelfStatus</span>:
+              <span className="fn-ltblue"> valueToUpdateWith</span>,
+            </li>
+            <li>{"}"}),</li> <li>{"}"});</li>
             <span className="fn-green">
               <br />
-              First, the function (updateBookShelfStatus) is called and receives
-              the data on the book that was clicked.
+              Finally, the function calls another function (getBooks).
+              getBooks() obtains a fresh copy of the data, which contains the
+              changes made, from the database.
             </span>
-          </li>
-          <li>
-            <span className="fn-dkblue">const </span>
-            <span className="fn-ltblue">updateBookShelfStatus </span>=
-            <span className="fn-dkblue"> async</span>(
-            <span className="fn-ltblue">event</span>){" => "}
-            {"{"}
-          </li>
-          <li>
-            <span className="fn-dkblue">const </span>
-            <span className="fn-ltblue">valueToUpdateWith </span>=
-            <span className="fn-ltblue"> event.target.value</span>;
-          </li>
-          <br />
-          <li>
-            <span className="fn-green">
-              Second, the function checks to make sure the function will exit on
-              the initial click on the book, and if they click on an invalid
-              option.
-            </span>
-          </li>
-          <li>
-            <span className="fn-purple">if </span>(
-            <span className="fn-ltblue">valueToUpdateWith </span>
-            ===
-            <span className="fn-orange"> "move"</span>) {"{"}
-          </li>
-          <span className="fn-purple">return</span>;<li>{"}"}</li>
-          <br />
-          <li>
-            <span className="fn-green">
-              Third, the function contacts the database (usually a server
-              online, but in this case, a local file) and tells it to change the
-              shelf location data to the shelf location that was clicked on.
-            </span>
-          </li>
-          <li>
-            <span className="fn-dkblue">const </span>
-            <span className="fn-ltblue">response </span>=
-            <span className="fn-purple"> await </span>
-            <span className="fn-yellow">fetch</span>(
-            <span className="fn-orange">`http://localhost:3001/books/$</span>
-            {"{"}
-            <span className="fn-ltblue">id</span>
-            {"}"}
-            <span className="fn-orange">`</span>, {"{"}
-          </li>
-          <li>
-            <span className="fn-ltblue">method</span>:
-            <span className="fn-orange"> "PATCH"</span>,
-          </li>{" "}
-          <li>
-            <span className="fn-ltblue">headers</span>: {"{"}
-            <span className="fn-orange"> "Content-Type"</span>:
-            <span className="fn-ltblue">"application/json"</span>
-            {"}"},
-          </li>{" "}
-          <li>
-            <span className="fn-ltblue">body</span>:
-            <span className="fn-ltblue"> JSON</span>.
-            <span className="fn-yellow">stringify</span>({"{"}
-          </li>{" "}
-          <li>
-            <span className="fn-ltblue">shelfStatus</span>:
-            <span className="fn-ltblue"> valueToUpdateWith</span>,
-          </li>
-          <li>{"}"}),</li> <li>{"}"});</li>
-          <span className="fn-green">
-            <br />
-            Finally, the function calls another function (getBooks). getBooks()
-            obtains a fresh copy of the data, which contains the changes made,
-            from the database.
-          </span>
-          <span className="fn-yellow">getBooks</span>(
-          <span className="fn-ltblue">updateBooks</span>
-          );
-          {"}"};
-          <li>
-            <br />
-            <span className="fn-green">
-              React now displays the updated data.
-            </span>
-          </li>
-        </ul>
+            <span className="fn-yellow">getBooks</span>(
+            <span className="fn-ltblue">updateBooks</span>
+            );
+            {"}"};
+            <li>
+              <br />
+              <span className="fn-green">
+                React now displays the updated data.
+              </span>
+            </li>
+          </ul>
         </code>
       </div>
     ),
@@ -1926,6 +1961,289 @@ const paragraphs = {
         to categorize specific books into book shelves. I hope you learned
         something new by reading through this article and are inspired to try
         something similar.
+      </>
+    ),
+  ],
+  post7: [
+    Paragraph(
+      <>
+        <span className="quote">
+          “Every single morning you’ll grab a cup of coffee, sit down in front
+          of your computer and start working on your personal project. No boss,
+          no job, no distractions. Think about that for a second…” “You’re one
+          of the very few people in the world who can make a living from doing
+          what they truly love.” -Jonas Hovgaard, Hovgaard Games
+        </span>
+      </>
+    ),
+    Paragraph(
+      <>
+        Does the idea quoted above appeal to you? It certainly appeals to me. In
+        this article I’m going to go over some of my own experiences with game
+        development, as well as advice and experiences from actual game devs.
+      </>
+    ),
+    Paragraph(
+      <>
+        <strong>My thoughts:</strong> I have been dabbling in game making on and
+        off for almost two decades and I have heard many arguments on the
+        question of “Do I need to know how to code to be successful?” Before
+        sharing some opinions by someone far more experienced than me, I will
+        share my own experience & opinions.
+      </>
+    ),
+    Paragraph(
+      <>
+        My first real attempts at creating games was through one of the old
+        <HTTPLink href="https://www.rpgmakerweb.com/">RPGMaker</HTTPLink>{" "}
+        engines (I believe it was either 95 or 2000.) It was great fun exploring
+        and setting up maps, characters, and basic events, but some issues
+        occurred when I decided I wanted to customize the game and make it
+        unique.
+      </>
+    ),
+    Paragraph(
+      <>
+        I managed to make some nice looking images and sprites in photoshop,
+        which I already had some experience with. Then the time came to
+        customize the game mechanics. With no programming experience under my
+        belt at the time I was solely reliant on scripts that other fans of
+        RPGMaker had made, and found it very difficult to use them if they
+        required even simple configuration in the script file. I took a long
+        hiatus from game development after feeling the constraints of the engine
+        when used with no programming knowledge.
+      </>
+    ),
+    Paragraph(
+      <>
+        Fast forward several years and I discovered{" "}
+        <HTTPLink href="https://www.udemy.com/course/unitycourse2/">
+          a fantastic course
+        </HTTPLink>{" "}
+        on Udemy. It is is aimed at people with little/no programming experience
+        and teaches C# by creating games in{" "}
+        <HTTPLink href="https://unity.com/">Unity</HTTPLink> , a popular, and
+        free, game making engine. My belief that programming knowledge was
+        indeed invaluable as a game developer was strengthened as I went through
+        the course and found out how much power and customization potential you
+        have with coding knowledge.
+      </>
+    ),
+    Paragraph(
+      <>
+        <strong>Others thoughts:</strong> I discovered{" "}
+        <HTTPLink href="https://www.gameindustrycareerguide.com/should-i-learn-programming-if-i-want-to-become-a-video-game-designer/">
+          an interesting podcast
+        </HTTPLink>{" "}
+        by{" "}
+        <HTTPLink href="https://www.mobygames.com/developer/sheet/view/developerId,51997/">
+          Jason W. Bay
+        </HTTPLink>{" "}
+        , a longtime veteran in the game development industry. In it he
+        addresses the question of whether programming knowledge is an important
+        skill to have in the industry. While this information is based on his
+        experience in a larger, non-indie environment, I feel the advice is
+        still applicable to anyone developing games. Regardless of your team
+        size (even if it’s just you) it is likely that you will need the help
+        and support of others in the game dev industry/community.
+      </>
+    ),
+    Paragraph(
+      <>
+        Game programmers obviously need to have programming knowledge, but what
+        about designers, audio specialists, and other content creators? Jason
+        addresses these and expresses his opinion that having programming
+        knowledge is one of the most important skills one can have in the
+        industry, even in roles where it is not strictly necessary. He makes
+        several good points, which I have paraphrased:
+        <ul>
+          <li>
+            {" "}
+            Game designers can greatly increase the speed and efficiency of
+            their work by being able to implement and test different features,
+            rather than having to rely on programmers to implement those
+            features for them.
+          </li>
+          <li>
+            Having programming knowledge increases the flexibility you have to
+            use different game development engines.
+          </li>
+          <li>
+            Having programming knowledge helps you understand the limitations
+            the programmers have in regards to implementing new features.
+          </li>
+          <li>
+            Having programming knowledge helps communication when speaking to
+            programmers.
+          </li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        It really depends on the type of game, as well as your area of
+        expertise. I have personally used a limited amount of game engines so I
+        cannot give an informed opinion on the majority of engines out there; I
+        doubt there are many people who could, given the number available today.
+        Here are my opinions of the pros/cons of the two major ones I have
+        worked with.
+      </>
+    ),
+    Paragraph(
+      <>
+        Pros:
+        <ul>
+          <li>Allows building of 3d environments and characters.</li>
+          <li>
+            Has a built in, customizable physics engine, including collision
+            detection.
+          </li>
+          <li>
+            Built in system to set up character animation, pathing, & behaviour
+            (AI).
+          </li>
+          <li>
+            Variables can be exposed as public, or serialized fields, to allow
+            toggling/adjustments in the UI.
+          </li>
+          <li>
+            Built in timeline system allows setting up timed events; enemy
+            spawning for example.
+          </li>
+          <li>Extremely in depth terrain building system.</li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        Cons:
+        <ul>
+          <li>
+            Not beginner friendly; takes a long time to learn more than the most
+            basic functionality.
+          </li>
+          <li>
+            Requires coding knowledge; does not have any built in
+            events/functions that can be used via the UI.
+          </li>
+          <li>
+            Resource heavy; can be slow and may have issues on older systems.
+          </li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        My experience is mostly based on the older RPGMaker engines, however I
+        have researched the newer engines such as MV.
+      </>
+    ),
+    Paragraph(
+      <>
+        Pros:
+        <ul>
+          <li>Beginner friendly; UI is easy to navigate.</li>
+          <li>
+            Has a built in event system that can be set up with no coding
+            knowledge.
+          </li>
+          <li>
+            Has built in character customization (classes, abilities, stat
+            growth, etc.)
+          </li>
+          <li>
+            Has many built in assets (materials, environments, character model
+            components with character creator).
+          </li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        Cons:
+        <ul>
+          <li>
+            Making a unique game is difficult if only using the pre-existing
+            assets.
+          </li>
+          <li>
+            As the name suggests, it is not ideal for developing non-RPG games.
+          </li>
+          <li>
+            If using the older engines, uses Ruby language (newer versions use
+            the more popular Javascript language.)
+          </li>
+          <li>
+            It is rare to find an example of a “successful” game made with the
+            engine.
+          </li>
+        </ul>
+      </>
+    ),
+    Paragraph(
+      <>
+        If you look at almost any article about the “best” game engines out
+        there you will find many differing opinions, but you’ll generally find
+        Unity and Unreal at, or near the top of the list. From my experience,
+        these are not beginner friendly engines, but they are extremely powerful
+        and are used for many AAA games. If you’re looking for something more
+        beginner friendly I’d suggest something like GameMaker: Studio,
+        RPGMaker, and{" "}
+        <HTTPLink href="https://gameanalytics.com/blog/top-5-game-engines-for-beginners/">
+          these others that are said to be beginner friendly
+        </HTTPLink>{" "}
+        .
+      </>
+    ),
+    Paragraph(
+      <>
+        The most important question, “Is this something I can actually do?” Do a
+        search on Google for “Can I make a living as a full time indie game
+        developer” and you’ll find almost endless amounts of posts and articles
+        such as{" "}
+        <HTTPLink href="https://www.theverge.com/2019/10/9/20903139/indie-game-developers-creators-money-funding">
+          this one
+        </HTTPLink>{" "}
+        . There are a lot of cautionary tales about indie game devs living on
+        the edge of poverty and spending huge chunks of time creating games that
+        ultimately become lost in obscurity.
+      </>
+    ),
+    Paragraph(
+      <>
+        It is not all bleak though.{" "}
+        <HTTPLink href="https://builtin.com/media-gaming/indie-game-developers">
+          There are many examples of successful indie game developers
+        </HTTPLink>{" "}
+        .
+      </>
+    ),
+    Paragraph(
+      <>
+        In the end, I believe it all comes down to how badly you want to
+        succeed. I’m not an indie game developer though so let me share this
+        quote from someone who is:
+      </>
+    ),
+    Paragraph(
+      <>
+        <span className="quote">
+          “... try to understand what you’re trying to achieve. This isn’t your
+          average dream. So to the average person, it will require extreme
+          persistence and consistency and a lot of hard work. Motivation will
+          help you with the first 10%, the remaining 90% is up to you. Ask
+          yourself if this is really for you. If it is, give it all you have and
+          make sure it’s your #1 priority until you’re done. No turning back,
+          full commitment.” -Jonas Hovgaard, Hovgaard Games
+        </span>
+      </>
+    ),
+    Paragraph(
+      <>
+        I hope the information on the pros and cons of various game engines, and
+        having an idea of the knowledge you will want before diving into game
+        development will help you in your own game development journey. Take
+        care and stay inspired!
       </>
     ),
   ],
@@ -2002,6 +2320,35 @@ const otherText = {
       `Conclusion`,
     ],
     citations: [],
+  },
+  post7: {
+    title: `Can I (you) be an indie game developer?`,
+    description: `I give my, and others' opinions on becoming an indie game developer.`,
+    date: 1624772340,
+    headers: [
+      `Do I need to know how to code?`,
+      `Which is the best game engine?`,
+      `Unity`,
+      `RPGMaker`,
+      `Is it feasible?`,
+      `Conclusion`,
+    ],
+    citations: [
+      {
+        author: `Bay, J. W.`,
+        date: `2020, February 15`,
+        document: `Should I learn programming if I want to become a video game designer?`,
+        retrieved: `June 27, 2021`,
+        link: `https://www.gameindustrycareerguide.com/`,
+      },
+      {
+        author: `Hovgaard, J.`,
+        date: `2019, September 10`,
+        document: `Making a successful indie game is not that hard!`,
+        retrieved: `June 27, 2021`,
+        link: `http://www.jhovgaard.com/`,
+      },
+    ],
   },
 };
 const posts = [
@@ -2126,6 +2473,47 @@ const posts = [
         {Image(images.post6.img4, true)}
         {ParagraphHeader(otherText.post6.headers[8])}
         {paragraphs.post6[15]}
+      </Container>
+    ),
+  },
+  {
+    id: 7,
+    fullPost: (
+      <Container maxWidth="md" id="post-body">
+        {Title(otherText.post7.title)}
+        {PostDate(otherText.post7.date)}
+        {Author("Andrew Borondia")}
+        {Image(images.post7.img1, false)}
+        {paragraphs.post7[0]}
+        {paragraphs.post7[1]}
+        {ParagraphHeader(otherText.post7.headers[0])}
+        {Image(images.post7.img2, false)}
+        {paragraphs.post7[2]}
+        {paragraphs.post7[3]}
+        {paragraphs.post7[4]}
+        {paragraphs.post7[5]}
+        {paragraphs.post7[6]}
+        {paragraphs.post7[7]}
+        {ParagraphHeader(otherText.post7.headers[1])}
+        {paragraphs.post7[8]}
+        {ParagraphHeader(otherText.post7.headers[2])}
+        {Image(images.post7.img3, false)}
+        {paragraphs.post7[9]}
+        {paragraphs.post7[10]}
+        {ParagraphHeader(otherText.post7.headers[3])}
+        {Image(images.post7.img4, false)}
+        {paragraphs.post7[11]}
+        {paragraphs.post7[12]}
+        {paragraphs.post7[13]}
+        {paragraphs.post7[14]}
+        {ParagraphHeader(otherText.post7.headers[4])}
+        {paragraphs.post7[15]}
+        {paragraphs.post7[16]}
+        {paragraphs.post7[17]}
+        {paragraphs.post7[18]}
+        {ParagraphHeader(otherText.post7.headers[5])}
+        {paragraphs.post7[19]}
+        <Bibliography citations={otherText.post7.citations} />
       </Container>
     ),
   },
