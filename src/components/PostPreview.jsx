@@ -11,6 +11,7 @@ const PostPreview = ({ postId }) => {
   const noImageSrc = "images/no-image.svg";
 
   const goToPost = (id) => {
+    console.log(id)
     window.scrollTo(0, 0);
     history.push({
       pathname: "/blog/post",
