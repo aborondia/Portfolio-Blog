@@ -2,7 +2,6 @@ import "./css/App.css";
 import Header from "./components/Header";
 import Blog from "./components/Blog";
 import AboutMe from "./components/AboutMe";
-import RecentPosts from "./components/RecentPosts";
 import Projects from "./components/Projects";
 import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
@@ -18,10 +17,6 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Main />
-          </Route>
-
-          <Route exact path="/recent-posts">
-            <RecentPosts />
           </Route>
 
           <Route exact path="/blog">
