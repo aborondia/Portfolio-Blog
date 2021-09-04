@@ -158,7 +158,7 @@ const paragraphs = {
   post1: [
     Paragraph(
       <>
-        Hello dear <b>readers</b>. My name is Andrew Borondia. I am a husband,
+        Hello dear readers. My name is Andrew Borondia. I am a husband,
         father (one human and four non-humans), gamer, nerd, and currently, a
         student in the Software Developer program at the{" "}
         <b>Manitoba Institute of Trades and Technology (MITT)</b>. I currently
