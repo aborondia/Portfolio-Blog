@@ -37,7 +37,11 @@ const images = {
     },
   },
   project6: {
-    img: null,
+    img: {
+      src: "",
+      alt: "",
+      caption: { text: "" },
+    },
   },
   project7: {
     img: {
@@ -55,12 +59,12 @@ const projects = [
     id: 1,
     title: "Unnamed RPG Game",
     description: (
-      <p>
+      <>
         This is a project I made as part of the Software Developer program at
         the Manitoba Institute of trades and Technology. It is an RPG game built
         using C#, for the C# console. The requirements for the project were very
         basic, but I have added many extra features.
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Unnamed-RPG-Game",
     live: "",
@@ -69,7 +73,7 @@ const projects = [
     id: 2,
     title: "Laptop Supplier",
     description: (
-      <p>
+      <>
         This is a project I made as part of the Software Developer program at
         the Manitoba Institute of trades and Technology. It was created using C#
         & ASP.Net MVC that has the basic functionality of an online shop. It
@@ -77,7 +81,7 @@ const projects = [
         Some of the functionalities that are implemented are sorting based on
         criteria such as price, year, etc., adding/removing brands/laptops from
         the database, and comparing laptop models.
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Laptop-Supplier",
     live: "https://bsite.net/aborondia/",
@@ -86,12 +90,12 @@ const projects = [
     id: 3,
     title: "MittFlix",
     description: (
-      <p>
+      <>
         This is a project I made as part of the Software Developer program at
         the Manitoba Institute of trades and Technology. It is created with
         React.js and allows the user to search for movies in the TMDB API
         database. The user can add & remove movies to and from their watch list.
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Mittflix",
     live: "https://affectionate-montalcini-1faf8b.netlify.app/",
@@ -100,12 +104,12 @@ const projects = [
     id: 4,
     title: "MittReads",
     description: (
-      <p>
+      <>
         This is a project I made as part of the Software Developer program at
         the Manitoba Institute of trades and Technology. This app, made in
         React.js, allows you to search through a (local storage) book database
         (json) and add those books to categories in your "book shelf."
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/MittReads",
     live: "https://fervent-visvesvaraya-fc46ee.netlify.app/",
@@ -114,7 +118,7 @@ const projects = [
     id: 5,
     title: "Trip Planner",
     description: (
-      <p>
+      <>
         This is a project I made as part of the Software Developer program at
         the Manitoba Institute of trades and Technology. It it made in
         JavaScript, and uses the <a href="https://www.mapbox.com">mapBox</a>{" "}
@@ -123,7 +127,7 @@ const projects = [
         user location), and destination, and gives them a list of routes (based
         on current time) they can take to reach it. The user can click on a
         route to view directions (ride bus, walk, transfer).
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Trip-Planner",
     live: "https://flamboyant-mahavira-e9230e.netlify.app/",
@@ -132,12 +136,12 @@ const projects = [
     id: 6,
     title: "Portfolio Blog",
     description: (
-      <p>
+      <>
         This is a site I created entirely in React.js to house the projects and
         writing I have done as part of the Software Developer program at the
         Manitoba Institute of trades and Technology. You're actually already
         here. What do you think?
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Portfolio-Blog",
     live: "",
@@ -146,13 +150,13 @@ const projects = [
     id: 7,
     title: "Nexbuss",
     description: (
-      <p>
+      <>
         This is a project I made during my time in the Software Developer course
         at the Manitoba Institute of Trades and Technology. It uses the{" "}
         <a href="https://api.winnipegtransit.com/">Winnipeg Transit API</a> to
         find information on buses that will be stopping at a specific stop,
         which can be searched based on the street name.
-      </p>
+      </>
     ),
     gitHub: "https://github.com/aborondia/Nexbuss",
     live: "https://flamboyant-mestorf-a2139c.netlify.app/",
@@ -172,9 +176,6 @@ export const getProjectsInfo = () => {
       live: projects[i].live,
     });
   }
-
-  console.log(images.project1.img);
-  console.log(projectsInfo[0].image);
 
   return projectsInfo;
 };

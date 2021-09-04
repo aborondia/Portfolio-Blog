@@ -109,6 +109,10 @@ export const HyperLink = (address, linkDescription = address) => {
 };
 
 export const Image = (image, larger = false) => {
+if(image.src === ""){
+  return;
+}
+
   return (
     <Container className={larger ? "large-picture" : "small-picture"}>
       <img src={image.src} alt={image.alt} />
@@ -118,6 +122,7 @@ export const Image = (image, larger = false) => {
         color="textSecondary"
         component="div"
       >
+        <></>
         {image.caption.text}
         <HTTPLink
           display="block"
@@ -127,6 +132,7 @@ export const Image = (image, larger = false) => {
           variant="caption"
         >
           {image.caption.link}
+          <></>
         </HTTPLink>
       </Typography>
     </Container>
