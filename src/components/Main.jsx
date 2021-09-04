@@ -9,7 +9,7 @@ const Main = () => {
   const previewPosts = [];
   const postsLength = getPostsLength() - 1;
 
-  for (let i = postsLength + 1; i > postsLength - 4; i--) {
+  for (let i = postsLength + 1; i > postsLength - 3; i--) {
     previewPosts.push(i);
   }
 
@@ -17,13 +17,12 @@ const Main = () => {
     <Container id="main-container">
       {Paragraph(
         <>
-          Hello and welcome to my blog. Here I share my ramblings and (soon to
-          come) different projects I've created in my time learning as a
-          software developer. This is still very much a work in progress but I'm
-          excited to see what I can add and improve. Head to the "About me" page
-          if you'd like to get to know me and see what I'm all about. I hope you
-          find some fun/interesting tidbits of information here. Have fun
-          exploring!
+          Hello and welcome to my blog. Here I share my ramblings and different
+          projects I've created in my time learning as a software developer.
+          This is still very much a work in progress but I'm excited to see what
+          I can add and improve. Head to the "About me" page if you'd like to
+          get to know me and see what I'm all about. I hope you find some
+          fun/interesting tidbits of information here. Have fun exploring!
         </>
       )}
       {Title("Recent Posts")}

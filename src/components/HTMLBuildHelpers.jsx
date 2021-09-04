@@ -3,13 +3,13 @@ import Container from "@material-ui/core/Container";
 import { Link as HTTPLink } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-export const Title = (content) => {
+export const Title = (content, colour = "secondary") => {
   return (
     <Typography
       className="title"
       display="block"
       variant="h2"
-      color="secondary"
+      color={colour}
       component="div"
     >
       {content}
@@ -25,12 +25,12 @@ export const Author = (authorName) => {
   );
 };
 
-export const ParagraphHeader = (content) => {
+export const ParagraphHeader = (content, colour = "error") => {
   return (
     <Typography
       display="block"
       variant="h4"
-      color="secondary"
+      color={colour}
       component="div"
       className="paragraph-header"
     >
@@ -39,13 +39,13 @@ export const ParagraphHeader = (content) => {
   );
 };
 
-export const Description = (content) => {
+export const Description = (content, colour = "textSecondary") => {
   return (
     <Typography
       className="description"
       display="block"
       variant="inherit"
-      color="textSecondary"
+      color={colour}
       component="div"
     >
       {content}
@@ -94,9 +94,23 @@ export const EmailAddress = (address) => {
   );
 };
 
+export const HyperLink = (address, linkDescription = address) => {
+  return (
+    <HTTPLink
+      display="inline"
+      href={address}
+      alt="link"
+      color="primary"
+      variant="inherit"
+    >
+      {linkDescription}
+    </HTTPLink>
+  );
+};
+
 export const Image = (image, larger = false) => {
   return (
-    <Container className={larger ? 'large-picture' : 'small-picture'}>
+    <Container className={larger ? "large-picture" : "small-picture"}>
       <img src={image.src} alt={image.alt} />
       <Typography
         className="caption"

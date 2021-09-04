@@ -1,3 +1,48 @@
-#projects .title{
-  text-align: center;
+.project-container{
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+#projects-container > .title {
+  margin-left: 4.75rem;
+}
+
+#projects-container ul > li,
+#projects-container ul > div {
+  width: fit-content;
+}
+
+#projects-info {
+  list-style: none;
+}
+
+#projects-info .description > div {
+  color: inherit;
+  display: inline;
+}
+
+#projects-info .description-title > div {
+  margin-left: 0;
+  font-size: 1.5rem;
+}
+
+#projects-info div {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+#projects-info .description {
+  margin-top: 1rem;
+  margin-left: 0rem;
+}
+
+#projects-info .small-picture{
+  margin-left: 0rem;
+  padding-left: 0rem;
+}
+
+#projects-info .small-picture img, #projects-info .small-picture .caption{
+  margin-left: 0;
+  padding-left: 0rem;
+  width: 40%;
 }

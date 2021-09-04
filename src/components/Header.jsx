@@ -15,19 +15,19 @@ const Header = () => {
       <Toolbar className='toolbar'>
         <List>
           <Button component={Link} to="/" color="inherit">
-            {ParagraphHeader(`Home`)}
+            {ParagraphHeader(`Home`, "primary")}
           </Button>
           <Button component={Link} to="/blog" color="inherit">
-            {ParagraphHeader(`Blog`)}
+            {ParagraphHeader(`Blog`, "primary")}
           </Button>
           <Button component={Link} to="/projects" color="inherit">
-            {ParagraphHeader(`Projects`)}
+            {ParagraphHeader(`Projects`, "primary")}
           </Button>
           <Button component={Link} to="/about-me" color="inherit">
-            {ParagraphHeader(`About Me`)}
+            {ParagraphHeader(`About Me`, "primary")}
           </Button>
           <Button component={Link} to="/contact" color="inherit">
-            {ParagraphHeader(`Contact`)}
+            {ParagraphHeader(`Contact`, "primary")}
           </Button>
         </List>
       </Toolbar>

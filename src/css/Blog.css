@@ -28,7 +28,6 @@
 .post-description-container:hover {
   cursor: pointer;
   max-width: fit-content;
-  border-radius: 3rem;
-  padding: 2rem;
-  background-color: rgba(15, 132, 228, 0.1);
+  border-radius: 1.5rem;
+  background-color: rgba(15, 132, 228, 0.3);
 }

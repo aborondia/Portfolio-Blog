@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
 
 #navbar {
   overflow: hidden;
   pointer-events: none;
   position: fixed;
-  background-color: hsla(231, 48%, 48%, 0.5);
+  background-color: rgb(134, 139, 163);
+  box-shadow: 3px 5px rgba(134, 139, 163, 0.25);
 }
 
-#navbar .toolbar{
+#navbar .toolbar {
   pointer-events: all;
 }
 
-#logo{
+#logo {
   position: fixed;
   pointer-events: all;
-z-index: 1;
+  z-index: 1;
 }
 
 #navbar .toolbar a span div {
   font-size: 1.25rem;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 #navbar > div {
