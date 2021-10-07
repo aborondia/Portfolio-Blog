@@ -7,7 +7,12 @@ const Post = () => {
   const postId = new URLSearchParams(location.search).get("id");
   const postData = getPostBody(parseInt(postId));
 
-  return <Container disableGutters maxWidth="lg">{postData}</Container>;
+  return (
+    <Container disableGutters maxWidth="lg">
+      {(window.scrollTo(0, 0), "smooth")}
+      {postData}
+    </Container>
+  );
 };
 
 export default Post;

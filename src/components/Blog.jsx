@@ -18,11 +18,12 @@ const Blog = () => {
 
   return (
     <Container id="post-descriptions-container">
+      {(window.scrollTo(0, 0), "smooth")}
       {Title("Posts")}
       <ul id="post-descriptions">
         {postDescriptions.map((post) => {
           if (!post.id) {
-            return '';
+            return "";
           }
 
           return (

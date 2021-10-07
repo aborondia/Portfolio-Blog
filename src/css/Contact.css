@@ -1,5 +1,9 @@
 #contact{
   list-style: none;
+  height: 100vh;
+  padding-left: 0;
+  margin: 0 9.5%;
+  font-size: 2rem;
 }
 
 #contact li{

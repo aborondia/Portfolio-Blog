@@ -1,19 +1,24 @@
-.project-container{
+.project-container {
   padding-bottom: 1rem;
   border-bottom: 1px solid gray;
 }
 
-#projects-container > .title {
-  margin-left: 4.75rem;
+#projects-info > .project-container {
+  margin:0;
+  padding-right: 0;
+  max-width: 80vw;
 }
 
 #projects-container ul > li,
 #projects-container ul > div {
   width: fit-content;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 #projects-info {
   list-style: none;
+  padding-left: 0;
 }
 
 #projects-info .description > div {
@@ -36,13 +41,15 @@
   margin-left: 0rem;
 }
 
-#projects-info .small-picture{
+#projects-info .small-picture {
   margin-left: 0rem;
   padding-left: 0rem;
 }
 
-#projects-info .small-picture img, #projects-info .small-picture .caption{
+#projects-info .small-picture img,
+#projects-info .small-picture .caption {
   margin-left: 0;
   padding-left: 0rem;
-  width: 40%;
+  height: 60%;
+  width: 60%;
 }

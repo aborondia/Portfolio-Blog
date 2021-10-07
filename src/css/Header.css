@@ -4,8 +4,8 @@
   overflow: hidden;
   pointer-events: none;
   position: fixed;
-  background-color: rgb(134, 139, 163);
-  box-shadow: 3px 5px rgba(134, 139, 163, 0.25);
+  background-color: hsla(119, 66%, 82%, 1);
+  box-shadow: 3px 3px hsla(119, 66%, 87%, 1);
 }
 
 #navbar .toolbar {
@@ -21,6 +21,7 @@
 #navbar .toolbar a span div {
   font-size: 1.25rem;
   font-family: "Open Sans";
+
 }
 
 #navbar > div {

@@ -1,13 +1,11 @@
-#post-descriptions-container > .title {
-  margin-left: 4.75rem;
-}
-
-#post-descriptions-container ul > li, #post-descriptions-container ul > div{
+#post-descriptions-container ul > li,
+#post-descriptions-container ul > div {
   width: fit-content;
 }
 
 #post-descriptions {
   list-style: none;
+  padding-left: 0;
 }
 
 #post-descriptions .small > div {
@@ -22,7 +20,9 @@
 
 #post-descriptions div {
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .post-description-container:hover {

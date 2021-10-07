@@ -8,9 +8,9 @@ const Bibliography = ({ citations }) => {
     <Container id="bibliography">
       <Typography
         className="description"
+        id="bibliography-header"
         display="block"
         variant="h3"
-        color="textSecondary"
         component="div"
       >
         Bibliography

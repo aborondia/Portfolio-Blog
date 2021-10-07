@@ -1,24 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #b8c6db;
-  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  background-image: linear-gradient(
+    145deg,
+    hsla(297, 91%, 91%, 1) 10%,
+    hsla(204, 56%, 98%, 1) 20%,
+    hsla(297, 91%, 91%, 1) 30%,
+    hsla(204, 56%, 98%, 1) 40%,
+    hsla(297, 91%, 91%, 1) 50%,
+    hsla(204, 56%, 98%, 1) 60%,
+    hsla(297, 91%, 91%, 1) 70%,
+    hsla(204, 56%, 98%, 1) 80%,
+    hsla(297, 91%, 91%, 1) 90%,
+    hsla(204, 56%, 98%, 1) 100%
+  );
 }
 
 main {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   height: fit-content;
   width: 100%;
   padding-top: 8rem;
 }
 
+main > .MuiContainer-root{
+  margin: 0 9.5%;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 80vw;
+}
+
+.title {
+  color: hsla(339, 928%, 52%, 1);
+}
+
+.paragraph-header {
+  color: hsla(220, 37%, 52%, 1);
+}
+
 .title {
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  #logo {
+    display: none;
+  }
+
+  #root > #navbar > div {
+    padding-left: 0;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  #root {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #root > main {
+    flex-basis: 70%;
+  }
+
+  #root > header {
+    flex-basis: 30%;
+    overflow: unset;
+    position: unset;
+    height: inherit;
+    width: fit-content;
+  }
+  #root > #navbar > div {
+    margin: 0;
+  }
 }

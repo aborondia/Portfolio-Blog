@@ -1,5 +1,11 @@
 import "../css/Projects.css";
-import { Title, HyperLink, Paragraph, Image, ParagraphHeader } from "./HTMLBuildHelpers";
+import {
+  Title,
+  HyperLink,
+  Paragraph,
+  Image,
+  ParagraphHeader,
+} from "./HTMLBuildHelpers";
 import Container from "@material-ui/core/Container";
 import { getProjectsInfo } from "../Projects";
 
@@ -8,6 +14,7 @@ const Projects = () => {
 
   return (
     <Container id="projects-container">
+      {window.scrollTo(0, 0),'smooth'}
       {Title("Projects")}
       <ul id="projects-info">
         {projectsInfo.map((project) => {
@@ -20,9 +27,7 @@ const Projects = () => {
               <li className="description-title">
                 {ParagraphHeader(project.title)}
               </li>
-              <li>
-              {Image(project.image)}
-              </li>
+              <li>{Image(project.image)}</li>
               {project.gitHub ? (
                 <li className="small">{HyperLink(project.gitHub, "GitHub")}</li>
               ) : (
@@ -34,7 +39,7 @@ const Projects = () => {
                 ""
               )}{" "}
               {/* <li className="description"> */}
-                {Paragraph(project.description)}
+              {Paragraph(project.description)}
               {/* </li> */}
             </Container>
           );

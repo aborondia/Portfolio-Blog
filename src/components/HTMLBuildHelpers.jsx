@@ -3,13 +3,12 @@ import Container from "@material-ui/core/Container";
 import { Link as HTTPLink } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-export const Title = (content, colour = "secondary") => {
+export const Title = (content) => {
   return (
     <Typography
       className="title"
       display="block"
       variant="h2"
-      color={colour}
       component="div"
     >
       {content}
@@ -25,12 +24,11 @@ export const Author = (authorName) => {
   );
 };
 
-export const ParagraphHeader = (content, colour = "error") => {
+export const ParagraphHeader = (content) => {
   return (
     <Typography
       display="block"
       variant="h4"
-      color={colour}
       component="div"
       className="paragraph-header"
     >
