@@ -5,12 +5,7 @@ import { Link } from "react-router-dom";
 
 export const Title = (content) => {
   return (
-    <Typography
-      className="title"
-      display="block"
-      variant="h2"
-      component="div"
-    >
+    <Typography className="title" display="block" variant="h1" component="div">
       {content}
     </Typography>
   );
@@ -28,7 +23,7 @@ export const ParagraphHeader = (content) => {
   return (
     <Typography
       display="block"
-      variant="h4"
+      variant="h3"
       component="div"
       className="paragraph-header"
     >
@@ -68,7 +63,7 @@ export const Paragraph = (paragraph) => {
   return (
     <Typography
       display="block"
-      variant="h6"
+      variant="h5"
       color="textPrimary"
       component="div"
       className="paragraph"
@@ -107,9 +102,9 @@ export const HyperLink = (address, linkDescription = address) => {
 };
 
 export const Image = (image, larger = false) => {
-if(image.src === ""){
-  return;
-}
+  if (image.src === "") {
+    return;
+  }
 
   return (
     <Container className={larger ? "large-picture" : "small-picture"}>

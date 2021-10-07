@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
-body {
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,21 +7,20 @@ body {
   height: 100%;
   background-image: linear-gradient(
     145deg,
-    hsla(297, 91%, 91%, 1) 10%,
-    hsla(204, 56%, 98%, 1) 20%,
-    hsla(297, 91%, 91%, 1) 30%,
-    hsla(204, 56%, 98%, 1) 40%,
-    hsla(297, 91%, 91%, 1) 50%,
-    hsla(204, 56%, 98%, 1) 60%,
-    hsla(297, 91%, 91%, 1) 70%,
-    hsla(204, 56%, 98%, 1) 80%,
-    hsla(297, 91%, 91%, 1) 90%,
-    hsla(204, 56%, 98%, 1) 100%
+    hsla(297, 91%, 98%, 1) 10%,
+    hsla(204, 56%, 99%, 1) 20%,
+    hsla(297, 91%, 98%, 1) 30%,
+    hsla(204, 56%, 99%, 1) 40%,
+    hsla(297, 91%, 98%, 1) 50%,
+    hsla(204, 56%, 99%, 1) 60%,
+    hsla(297, 91%, 98%, 1) 70%,
+    hsla(204, 56%, 99%, 1) 80%,
+    hsla(297, 91%, 98%, 1) 90%,
+    hsla(204, 56%, 99%, 1) 100%
   );
 }
 
 main {
-  font-family: "Open Sans";
   height: fit-content;
   width: 100%;
   padding-top: 8rem;
@@ -35,7 +34,8 @@ main > .MuiContainer-root{
 }
 
 .title {
-  color: hsla(339, 928%, 52%, 1);
+  color: hsla(339, 928%, 42%, 1);
+  /* color: hsla(339, 928%, 52%, 1); */
 }
 
 .paragraph-header {

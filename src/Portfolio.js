@@ -8,10 +8,26 @@ import Main from "./components/Main";
 import Contact from "./components/Contact";
 import Post from "./components/Post";
 import "./css/Post.css";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Inconsolata",
+    "fontWeightExtra-light": 200,
+    "fontWeightLight": 300,
+    "fontWeightRegular": 400,
+    "fontWeightMedium": 500,
+    "fontWeightSemi-bold": 600,
+    "fontWeightBold": 700,
+    "fontWeightExtra-bold": 800,
+    "fontWeightBlack": 900,
+  },
+
+});
 
 const App = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header />
       <main>
         <Switch>
@@ -40,7 +56,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
-    </>
+    </ThemeProvider>
   );
 };
 
