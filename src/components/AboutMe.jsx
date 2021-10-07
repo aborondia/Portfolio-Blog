@@ -6,7 +6,7 @@ const AboutMe = () => {
 
   return (
     <Container maxWidth="md">
-      {(window.scrollTo(0, 0), "smooth")}
+      {window.scrollTo(0, 0, "smooth")}
       {postData}
     </Container>
   );

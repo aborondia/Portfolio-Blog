@@ -9,7 +9,7 @@ const Post = () => {
 
   return (
     <Container disableGutters maxWidth="lg">
-      {(window.scrollTo(0, 0), "smooth")}
+      {window.scrollTo(0, 0, "smooth")}
       {postData}
     </Container>
   );

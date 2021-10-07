@@ -15,7 +15,7 @@ const Main = () => {
 
   return (
     <Container id="main-container">
-      {(window.scrollTo(0, 0), "smooth")}
+      {window.scrollTo(0, 0, "smooth")}
       {Paragraph(
         <>
           Hello and welcome to my blog. Here I share my ramblings and different

@@ -4,7 +4,7 @@ import "../css/Contact.css";
 const Contact = () => {
   return (
     <ul id="contact">
-      {(window.scrollTo(0, 0), "smooth")}
+      {window.scrollTo(0, 0, "smooth")}
       <li> {Title("Contact me")}</li>
       <li> Name: {Author("Andrew Borondia")}</li>
       <li> Email: {EmailAddress("aborondia@gmail.com")}</li>

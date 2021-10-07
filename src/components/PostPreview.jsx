@@ -11,8 +11,8 @@ const PostPreview = ({ postId }) => {
   const noImageSrc = "images/no-image.svg";
 
   const goToPost = (id) => {
-    console.log(id)
-    window.scrollTo(0, 0);
+    console.log(id);
+    window.scrollTo(0, 0, "smooth");
     history.push({
       pathname: "/blog/post",
       search: `id=${id}`,
@@ -21,7 +21,11 @@ const PostPreview = ({ postId }) => {
 
   return (
     <Card className="preview-card" onClick={() => goToPost(postId)}>
-      <CardHeader className="card-header" title={ParagraphHeader(title)} subheader={date} />
+      <CardHeader
+        className="card-header"
+        title={ParagraphHeader(title)}
+        subheader={date}
+      />
       <CardMedia
         className="card-media"
         image={image ? image.src : noImageSrc}
