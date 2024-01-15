@@ -1,6 +1,6 @@
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import {Link as HTTPLink} from '@material-ui/core';
+import { Link as HTTPLink } from "@material-ui/core";
 import "../css/Bibliography.css";
 
 const Bibliography = ({ citations }) => {
@@ -12,6 +12,7 @@ const Bibliography = ({ citations }) => {
         display="block"
         variant="h3"
         component="div"
+        color="inherit"
       >
         Bibliography
       </Typography>
@@ -22,7 +23,7 @@ const Bibliography = ({ citations }) => {
               className="description"
               display="block"
               variant="body2"
-              color="textSecondary"
+              color="inherit"
               component="div"
             >
               {citation.author}, ({citation.date}). {citation.document},{" "}

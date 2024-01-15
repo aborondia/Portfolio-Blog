@@ -3,9 +3,34 @@ import Container from "@material-ui/core/Container";
 import { Link as HTTPLink } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-export const Title = (content) => {
+export const getTitlesClasses = (classesArray) => {
+  let classesString = "";
+
+  for (var i = 0; i < classesArray.length; i++) {
+    classesString += classesArray[i];
+
+    if (i + 1 < classesArray.length) {
+      classesString += " ";
+    }
+  }
+
+  return classesString;
+};
+
+export const Title = (
+  content,
+  variant,
+  textAlign = "left",
+  classNames = ["title"]
+) => {
   return (
-    <Typography className="title" display="block" variant="h1" component="div">
+    <Typography
+      className={getTitlesClasses(classNames)}
+      display="block"
+      variant={variant}
+      component="div"
+      style={{ textAlign: textAlign }}
+    >
       {content}
     </Typography>
   );
@@ -13,22 +38,12 @@ export const Title = (content) => {
 
 export const Author = (authorName) => {
   return (
-    <Link to="./about-me" className="author">
+    <Link
+      className="author"
+      to="./about-me"
+    >
       {authorName}
     </Link>
-  );
-};
-
-export const ParagraphHeader = (content) => {
-  return (
-    <Typography
-      display="block"
-      variant="h3"
-      component="div"
-      className="paragraph-header"
-    >
-      {content}
-    </Typography>
   );
 };
 
@@ -51,7 +66,7 @@ export const PostDate = (date) => {
     <Typography
       className="date"
       variant="inherit"
-      color="textSecondary"
+      color="inherit"
       component="div"
     >
       {new Date(date * 1000).toLocaleDateString()}
@@ -64,7 +79,7 @@ export const Paragraph = (paragraph) => {
     <Typography
       display="block"
       variant="h5"
-      color="textPrimary"
+      color="initial"
       component="div"
       className="paragraph"
     >
@@ -79,7 +94,8 @@ export const EmailAddress = (address) => {
       display="inline"
       href={`mailto:${address}`}
       alt="contact me"
-      color="primary"
+      color="inherit"
+      className="link"
       variant="inherit"
     >
       {address}
@@ -93,7 +109,8 @@ export const HyperLink = (address, linkDescription = address) => {
       display="inline"
       href={address}
       alt="link"
-      color="primary"
+      color="initial"
+      className="link"
       variant="inherit"
     >
       {linkDescription}
@@ -107,12 +124,18 @@ export const Image = (image, larger = false) => {
   }
 
   return (
-    <Container className={larger ? "large-picture" : "small-picture"}>
-      <img src={image.src} alt={image.alt} />
+    <Container
+      disableGutters={true}
+      className={larger ? "large-picture" : "small-picture"}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+      />
       <Typography
         className="caption"
         variant="caption"
-        color="textSecondary"
+        color="inherit"
         component="div"
       >
         <></>
@@ -121,7 +144,8 @@ export const Image = (image, larger = false) => {
           display="block"
           href={image.caption.link}
           alt=""
-          color="primary"
+          color="inherit"
+          className="link"
           variant="caption"
         >
           {image.caption.link}

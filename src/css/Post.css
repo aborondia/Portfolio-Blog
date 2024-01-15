@@ -1,12 +1,4 @@
-#post-body .MuiContainer-root {
-  margin: 0;
-  padding: 0;
-}
-
 #post-body {
-  padding-right: 0;
-  width: 100vw;
-  margin: 0;
   max-width: 80vw;
 }
 
@@ -17,6 +9,7 @@
 #post-body .author {
   display: block;
   margin-bottom: 1rem;
+  color: var(--regular-font);
 }
 
 #post-body .small-picture img,
@@ -28,11 +21,6 @@
 #post-body .large-picture .caption,
 #post-body .large-picture img {
   width: 80%;
-}
-
-#post-body,
-#post-body .image-container {
-  padding: 0;
 }
 
 #post-body p {

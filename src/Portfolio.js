@@ -1,7 +1,7 @@
 import "./css/App.css";
-import Header from "./components/Header";
+import Title from "./components/Header";
 import Blog from "./components/Blog";
-import AboutMe from "./components/AboutMe";
+// import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
@@ -14,40 +14,66 @@ const theme = createTheme({
   typography: {
     fontFamily: "Inconsolata",
     "fontWeightExtra-light": 200,
-    "fontWeightLight": 300,
-    "fontWeightRegular": 400,
-    "fontWeightMedium": 500,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
     "fontWeightSemi-bold": 600,
-    "fontWeightBold": 700,
+    fontWeightBold: 700,
     "fontWeightExtra-bold": 800,
-    "fontWeightBlack": 900,
+    fontWeightBlack: 900,
   },
-
+  components: {
+    // Name of the component
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          fontSize: "1rem",
+        },
+      },
+    },
+  },
 });
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <main>
+      <main className="main">
+        <Title />
         <Switch>
-          <Route exact path="/">
+          <Route
+            exact
+            path="/"
+          >
             <Main />
           </Route>
 
-          <Route exact path="/blog">
+          <Route
+            exact
+            path="/blog"
+          >
             <Blog />
           </Route>
 
-          <Route exact path="/projects">
+          <Route
+            exact
+            path="/projects"
+          >
             <Projects />
           </Route>
 
-          <Route exact path="/about-me">
+          {/* <Route
+            exact
+            path="/about-me"
+          >
             <AboutMe />
-          </Route>
+          </Route> */}
 
-          <Route exact path="/contact">
+          <Route
+            exact
+            path="/contact"
+          >
             <Contact />
           </Route>
 

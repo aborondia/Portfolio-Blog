@@ -1,11 +1,17 @@
-#contact{
+#contact {
   list-style: none;
   height: 100vh;
   padding-left: 0;
-  margin: 0 9.5%;
+  /* margin: 0 9.5%; */
   font-size: 2rem;
 }
 
-#contact li{
-margin-bottom: 1rem;
+#contact li {
+  margin-bottom: 1rem;
+  color: var(--regular-font);
+}
+
+#contact {
+  text-decoration: none;
+  text-decoration-line: none;
 }

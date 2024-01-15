@@ -1,36 +1,36 @@
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import { getPostPreview } from "../Posts";
+import { getProjectPreview } from "../Projects";
 import { Description, Title } from "./HTMLBuildHelpers";
 import { useHistory } from "react-router-dom";
 
-const PostPreview = ({ postId }) => {
+const ProjectPreview = ({ projectId }) => {
   const history = useHistory();
-  const { title, description, date, image } = getPostPreview(postId);
+  const { title, description, image } = getProjectPreview(projectId);
   const noImageSrc = "images/no-image.svg";
 
-  const goToPost = (id) => {
-    window.scrollTo(0, 0, "smooth");
+  const goToProject = (projectId) => {
+    // window.scrollTo(0, 0, "smooth");
     history.push({
-      pathname: "/blog/post",
-      search: `id=${id}`,
+      pathname: "/projects",
+      state: { projectId: projectId },
     });
   };
 
   return (
     <Card
       className="preview-card"
-      onClick={() => goToPost(postId)}
+      onClick={() => goToProject(projectId)}
     >
       <CardHeader
         className="card-header"
         title={Title(title, "h3")}
-        subheader={date}
+        // subheader={gitHub}
       />
       <CardMedia
         className="card-media"
-        image={image ? image.src : noImageSrc}
+        image={image.src ? image.src : noImageSrc}
         title={image ? image.alt : ""}
       />
       {Description(description)}
@@ -38,4 +38,4 @@ const PostPreview = ({ postId }) => {
   );
 };
 
-export default PostPreview;
+export default ProjectPreview;

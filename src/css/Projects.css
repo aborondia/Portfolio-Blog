@@ -4,7 +4,7 @@
 }
 
 #projects-info > .project-container {
-  margin:0;
+  margin: 0;
   padding-right: 0;
   max-width: 80vw;
 }
@@ -18,7 +18,7 @@
 
 #projects-info {
   list-style: none;
-  padding-left: 0;
+  /* padding-left: 24px; */
 }
 
 #projects-info .description > div {

@@ -5,7 +5,6 @@
 
 #post-descriptions {
   list-style: none;
-  padding-left: 0;
 }
 
 #post-descriptions .small > div {
@@ -18,16 +17,32 @@
   font-size: 2.5rem;
 }
 
-#post-descriptions div {
+#post-descriptions .title {
   margin-bottom: 1rem;
-  /* margin-left: 1rem; */
-  margin-left: 0;
-  padding-left: 0;
 }
 
-.post-description-container:hover {
+.post-header {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.post-display {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  width: fit-content;
+}
+
+.post-display:hover {
   cursor: pointer;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   border-radius: 1.5rem;
-  background-color: rgba(15, 132, 228, 0.3);
+  background-color: var(--hover);
+}
+
+.small-list-item {
+  color: var(--regular-font);
 }

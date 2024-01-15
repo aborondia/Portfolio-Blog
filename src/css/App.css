@@ -1,83 +1,95 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap"); */
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');body {
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* pallette#1 */
+  --background: linear-gradient(
+    145deg,
+    hsla(23, 23.6%, 82.5%) 10%,
+    hsla(23, 23.6%, 82.5%) 20%,
+    hsla(23, 23.6%, 82.5%) 30%,
+    hsla(23, 23.6%, 82.5%) 40%,
+    hsla(23, 23.6%, 82.5%) 50%,
+    hsla(23, 23.6%, 82.5%) 60%,
+    hsla(23, 23.6%, 82.5%) 70%,
+    hsla(23, 23.6%, 82.5%) 80%,
+    hsla(23, 23.6%, 82.5%) 90%,
+    hsla(23, 23.6%, 82.5%) 100%
+  );
+  /* pallette#2 */
+  /* --background: linear-gradient(
+    145deg,
+    hsla(224, 56%, 14%) 10%,
+    hsla(224, 56%, 14%) 20%,
+    hsla(224, 56%, 14%) 30%,
+    hsla(224, 56%, 14%) 40%,
+    hsla(224, 56%, 14%) 50%,
+    hsla(224, 56%, 14%) 60%,
+    hsla(224, 56%, 14%) 70%,
+    hsla(224, 56%, 14%) 80%,
+    hsla(224, 56%, 14%) 90%,
+    hsla(224, 56%, 14%) 100%
+  ); */
+
+  --hover: rgba(255, 255, 255, 0.25);
+  /* pallette#1 */
+  --header-font: rgba(50, 50, 50, 1);
+  --regular-font: rgba(50, 50, 50, 0.8);
+  --link-font: rgba(50, 50, 50, 0.6);
+  /* pallette#2 */
+  /* --header-font: rgb(226, 232, 240);
+  --regular-font: rgb(148, 163, 184);
+  --link-font: rgb(226, 232, 240); */
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: solid;
+  border-radius: 1.5rem;
+  text-decoration-line: underline;
+}
+
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    145deg,
-    hsla(297, 91%, 98%, 1) 10%,
-    hsla(204, 56%, 99%, 1) 20%,
-    hsla(297, 91%, 98%, 1) 30%,
-    hsla(204, 56%, 99%, 1) 40%,
-    hsla(297, 91%, 98%, 1) 50%,
-    hsla(204, 56%, 99%, 1) 60%,
-    hsla(297, 91%, 98%, 1) 70%,
-    hsla(204, 56%, 99%, 1) 80%,
-    hsla(297, 91%, 98%, 1) 90%,
-    hsla(204, 56%, 99%, 1) 100%
-  );
-}
-
-main {
-  height: fit-content;
-  width: 100%;
-  padding-top: 8rem;
-}
-
-main > .MuiContainer-root{
-  margin: 0 9.5%;
-  padding-left: 0;
-  padding-right: 0;
-  max-width: 80vw;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: var(--background);
 }
 
 .title {
-  color: hsla(339, 928%, 42%, 1);
-  /* color: hsla(339, 928%, 52%, 1); */
-}
-
-.paragraph-header {
-  color: hsla(220, 37%, 52%, 1);
-}
-
-.title {
+  color: var(--header-font);
   margin: 0;
   padding: 0;
 }
 
-@media only screen and (max-width: 750px) {
-  #logo {
-    display: none;
-  }
-
-  #root > #navbar > div {
-    padding-left: 0;
-    margin: auto;
-  }
+.paragraph-header {
+  color: var(--header-font);
 }
 
-@media only screen and (max-width: 580px) {
-  #root {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.paragraph {
+  color: var(--regular-font);
+}
 
-  #root > main {
-    flex-basis: 70%;
-  }
+.link {
+  color: var(--link-font);
+}
 
-  #root > header {
-    flex-basis: 30%;
-    overflow: unset;
-    position: unset;
-    height: inherit;
-    width: fit-content;
-  }
-  #root > #navbar > div {
-    margin: 0;
-  }
+.author {
+  color: var(--link-font);
+}
+
+.caption {
+  color: var(--regular-font);
+}
+
+.date {
+  color: var(--regular-font);
+}
+
+.hover {
+  background-color: var(--hover);
 }

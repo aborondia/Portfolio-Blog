@@ -1,0 +1,45 @@
+.nav-bio {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bio {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-bio > .bio-name {
+  max-width: 300px;
+}
+
+#nav-bio > .bio-role {
+  margin-bottom: 1rem;
+}
+
+#top-bio > .bio-role {
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 4800px) {
+  #nav-bio {
+    display: flex;
+  }
+
+  #main-container > .top-bio {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  #nav-bio {
+    display: none;
+  }
+
+  #main-container > .top-bio {
+    display: flex;
+  }
+}

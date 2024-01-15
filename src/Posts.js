@@ -4,7 +4,6 @@ import { Link as HTTPLink } from "@material-ui/core";
 import {
   Title,
   Author,
-  ParagraphHeader,
   PostDate,
   Paragraph,
   Image,
@@ -158,9 +157,9 @@ const paragraphs = {
   post1: [
     Paragraph(
       <>
-        Hello dear readers. My name is Andrew Borondia. I am a husband,
-        father (one human and four non-humans), gamer, nerd, and currently, a
-        student in the Software Developer program at the{" "}
+        Hello dear readers. My name is Andrew Borondia. I am a husband, father
+        (one human and four non-humans), gamer, nerd, and currently, a student
+        in the Software Developer program at the{" "}
         <b>Manitoba Institute of Trades and Technology (MITT)</b>. I currently
         spend my days banging my head against the wall (not literally, thank you
         for your concern) trying to understand the vast topic that is computer
@@ -327,7 +326,7 @@ const paragraphs = {
           component="span"
           variant="caption"
           to="https://en.wikipedia.org/wiki/Wikipedia:10,000_most_common_passwords"
-          color="primary"
+          color="inherit"
         >
           10,000 most common passwords
         </HTTPLink>
@@ -340,7 +339,7 @@ const paragraphs = {
           component="span"
           variant="caption"
           to="https://en.wikipedia.org/wiki/Brute-force_attack#:~:text=In%20cryptography%2C%20a%20brute%2Dforce,the%20correct%20one%20is%20found."
-          color="primary"
+          color="inherit"
         >
           Brute-force attack
         </HTTPLink>
@@ -579,7 +578,7 @@ const paragraphs = {
           remaster.
         </>
       )}
-      {ParagraphHeader(<>Pick strong allies</>)}
+      {Title(<>Pick strong allies</>, "h3")}
 
       {Paragraph(
         <>
@@ -809,7 +808,11 @@ const paragraphs = {
         </a>
       </p>
       <h2 id="and-">
-        <a name="and-" className="anchor" href="#and-">
+        <a
+          name="and-"
+          className="anchor"
+          href="#and-"
+        >
           <span className="header-link"></span>
         </a>
         And...
@@ -886,7 +889,7 @@ const paragraphs = {
           Has a powerful starting form that can be effective up to the end game.
         </li>
       </ul>
-      {ParagraphHeader(<>Plan your team</>)}
+      {Title(<>Plan your team</>, "h3")}
 
       {Paragraph(
         <>
@@ -928,7 +931,7 @@ const paragraphs = {
           </ul>
         </>
       )}
-      {ParagraphHeader(<>Recruitable characters by protagonist</>)}
+      {Title(<>Recruitable characters by protagonist</>, "h3")}
       {Paragraph(
         <>
           <table>
@@ -1379,7 +1382,7 @@ const paragraphs = {
           ). See the guide for more detailed information.
         </>
       )}
-      {ParagraphHeader(<>Plan your build</>)}
+      {Title(<>Plan your build</>, "h3")}
       {Paragraph(
         <>
           <p>
@@ -1414,7 +1417,7 @@ const paragraphs = {
           </p>
         </>
       )}
-      {ParagraphHeader(<>Get rich</>)}
+      {Title(<>Get rich</>, "h3")}
       {Paragraph(
         <>
           <p>
@@ -1449,7 +1452,7 @@ const paragraphs = {
           </p>
         </>
       )}
-      {ParagraphHeader(<>Get instant death skills</>)}
+      {Title(<>Get instant death skills</>, "h3")}
       {Paragraph(
         <>
           <p>
@@ -1482,7 +1485,7 @@ const paragraphs = {
           </ul>
         </>
       )}
-      {ParagraphHeader(<>Get posessed</>)}
+      {Title(<>Get posessed</>, "h3")}
       {Paragraph(
         <>
           <p>
@@ -2307,8 +2310,12 @@ const posts = [
     id: 1,
     description: otherText.post1.description,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post1.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post1.title, "h2")}
         {PostDate(otherText.post1.date)}
         {Author("Andrew Borondia")}
         {Image(images.post1.img1)}
@@ -2325,20 +2332,24 @@ const posts = [
     id: 2,
     description: otherText.post2.description,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post2.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post2.title, "h2")}
         {PostDate(otherText.post2.date)}
         {Author("Andrew Borondia")}
         {Image(images.post2.img1)}
         {paragraphs.post2[0]}
-        {ParagraphHeader(otherText.post2.headers[0])}
+        {Title(otherText.post2.headers[0], "h3")}
         {paragraphs.post2[1]}
         {paragraphs.post2[2]}
-        {ParagraphHeader(otherText.post2.headers[1])}
+        {Title(otherText.post2.headers[1], "h3")}
         {Image(images.post2.img2)}
         {paragraphs.post2[3]}
         {paragraphs.post2[4]}
-        {ParagraphHeader(otherText.post2.headers[2])}
+        {Title(otherText.post2.headers[2], "h3")}
         {paragraphs.post2[5]}
       </Container>
     ),
@@ -2346,20 +2357,24 @@ const posts = [
   {
     id: 3,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post3.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post3.title, "h2")}
         {PostDate(otherText.post3.date)}
         {Author("Andrew Borondia")}
         {paragraphs.post3[0]}
         {Image(images.post3.img1)}
-        {ParagraphHeader(otherText.post3.headers[0])}
+        {Title(otherText.post3.headers[0], "h3")}
         {paragraphs.post3[1]}
-        {ParagraphHeader(otherText.post3.headers[1])}
+        {Title(otherText.post3.headers[1], "h3")}
         {paragraphs.post3[2]}
         {Image(images.post3.img2)}
-        {ParagraphHeader(otherText.post3.headers[2])}
+        {Title(otherText.post3.headers[2], "h3")}
         {paragraphs.post3[3]}
-        {ParagraphHeader(otherText.post3.headers[3])}
+        {Title(otherText.post3.headers[3], "h3")}
         {paragraphs.post3[4]}
         <Bibliography citations={otherText.post3.citations} />
       </Container>
@@ -2368,17 +2383,21 @@ const posts = [
   {
     id: 4,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post4.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post4.title, "h2")}
         {PostDate(otherText.post4.date)}
         {Author("Andrew Borondia")}
         {paragraphs.post4[0]}
-        {ParagraphHeader(otherText.post4.headers[0])}
+        {Title(otherText.post4.headers[0], "h3")}
         {paragraphs.post4[1]}
         {paragraphs.post4[2]}
-        {ParagraphHeader(otherText.post4.headers[1])}
+        {Title(otherText.post4.headers[1], "h3")}
         {paragraphs.post4[3]}
-        {ParagraphHeader(otherText.post4.headers[2])}
+        {Title(otherText.post4.headers[2], "h3")}
         {paragraphs.post4[4]}
         {paragraphs.post4[5]}
       </Container>
@@ -2387,8 +2406,12 @@ const posts = [
   {
     id: 5,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post5.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post5.title, "h2")}
         {PostDate(otherText.post5.date)}
         {Author("Andrew Borondia")}
         {paragraphs.post5[0]}
@@ -2398,38 +2421,42 @@ const posts = [
   {
     id: 6,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post6.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post6.title, "h2")}
         {PostDate(otherText.post6.date)}
         {Author("Andrew Borondia")}
         {paragraphs.post6[0]}
-        {ParagraphHeader(otherText.post6.headers[0])}
+        {Title(otherText.post6.headers[0], "h3")}
         {paragraphs.post6[1]}
         {paragraphs.post6[2]}
-        {ParagraphHeader(otherText.post6.headers[1])}
+        {Title(otherText.post6.headers[1], "h3")}
         {paragraphs.post6[3]}
         {paragraphs.post6[4]}
-        {ParagraphHeader(otherText.post6.headers[2])}
+        {Title(otherText.post6.headers[2], "h3")}
         {paragraphs.post6[5]}
         {paragraphs.post6[6]}
         {paragraphs.post6[7]}
-        {ParagraphHeader(otherText.post6.headers[3])}
+        {Title(otherText.post6.headers[3], "h3")}
         {paragraphs.post6[8]}
         {Image(images.post6.img1, true)}
-        {ParagraphHeader(otherText.post6.headers[4])}
+        {Title(otherText.post6.headers[4], "h3")}
         {paragraphs.post6[9]}
         {Image(images.post6.img2, true)}
-        {ParagraphHeader(otherText.post6.headers[5])}
+        {Title(otherText.post6.headers[5], "h3")}
         {paragraphs.post6[10]}
         {paragraphs.post6[11]}
         {paragraphs.post6[12]}
-        {ParagraphHeader(otherText.post6.headers[6])}
+        {Title(otherText.post6.headers[6], "h3")}
         {paragraphs.post6[13]}
         {Image(images.post6.img3, true)}
-        {ParagraphHeader(otherText.post6.headers[7])}
+        {Title(otherText.post6.headers[7], "h3")}
         {paragraphs.post6[14]}
         {Image(images.post6.img4, true)}
-        {ParagraphHeader(otherText.post6.headers[8])}
+        {Title(otherText.post6.headers[8], "h3")}
         {paragraphs.post6[15]}
       </Container>
     ),
@@ -2437,14 +2464,18 @@ const posts = [
   {
     id: 7,
     fullPost: (
-      <Container maxWidth="md" id="post-body">
-        {Title(otherText.post7.title)}
+      <Container
+        disableGutters={true}
+        maxWidth="md"
+        id="post-body"
+      >
+        {Title(otherText.post7.title, "h2")}
         {PostDate(otherText.post7.date)}
         {Author("Andrew Borondia")}
         {Image(images.post7.img1, false)}
         {paragraphs.post7[0]}
         {paragraphs.post7[1]}
-        {ParagraphHeader(otherText.post7.headers[0])}
+        {Title(otherText.post7.headers[0], "h3")}
         {Image(images.post7.img2, false)}
         {paragraphs.post7[2]}
         {paragraphs.post7[3]}
@@ -2452,24 +2483,24 @@ const posts = [
         {paragraphs.post7[5]}
         {paragraphs.post7[6]}
         {paragraphs.post7[7]}
-        {ParagraphHeader(otherText.post7.headers[1])}
+        {Title(otherText.post7.headers[1], "h3")}
         {paragraphs.post7[8]}
-        {ParagraphHeader(otherText.post7.headers[2])}
+        {Title(otherText.post7.headers[2], "h3")}
         {Image(images.post7.img3, false)}
         {paragraphs.post7[9]}
         {paragraphs.post7[10]}
-        {ParagraphHeader(otherText.post7.headers[3])}
+        {Title(otherText.post7.headers[3], "h3")}
         {Image(images.post7.img4, false)}
         {paragraphs.post7[11]}
         {paragraphs.post7[12]}
         {paragraphs.post7[13]}
         {paragraphs.post7[14]}
-        {ParagraphHeader(otherText.post7.headers[4])}
+        {Title(otherText.post7.headers[4], "h3")}
         {paragraphs.post7[15]}
         {paragraphs.post7[16]}
         {paragraphs.post7[17]}
         {paragraphs.post7[18]}
-        {ParagraphHeader(otherText.post7.headers[5])}
+        {Title(otherText.post7.headers[5], "h3")}
         {paragraphs.post7[19]}
         <Bibliography citations={otherText.post7.citations} />
       </Container>

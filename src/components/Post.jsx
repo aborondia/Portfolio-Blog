@@ -8,7 +8,9 @@ const Post = () => {
   const postData = getPostBody(parseInt(postId));
 
   return (
-    <Container disableGutters maxWidth="lg">
+    <Container
+      maxWidth="lg"
+    >
       {window.scrollTo(0, 0, "smooth")}
       {postData}
     </Container>

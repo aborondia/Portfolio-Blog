@@ -6,14 +6,14 @@
 	color: #f3f3f3;
 }
 
-body {
+.body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	background-color: #f3f3f3;
 }
 
-header {
+.header {
 	z-index: 1;
 	background-color: #f3f3f3;
 	overflow: hidden;
@@ -22,27 +22,27 @@ header {
 	width: 100%;
 }
 
-header .border {
+.header .border {
 	margin: auto;
 	width: 50%;
 	border-bottom: 1px solid black;
 }
 
-main {
+.main {
 	margin-top: 8rem;
 }
 
-h1,
-ul {
+.h1,
+.ul {
 	text-align: center;
 }
 
-h1,
-h2 {
+.h1,
+.h2 {
 	color: #3c1874;
 }
 
-li {
+.li {
 	color: #de354c;
 	margin-left: 0.5rem;
 	font-weight: bolder;
@@ -76,7 +76,7 @@ li {
 	margin: auto;
 }
 
-button {
+.button {
 	padding: 0.5rem 2rem;
 	font-weight: bolder;
 	font-size: 1.25rem;

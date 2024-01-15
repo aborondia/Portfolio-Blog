@@ -1,57 +1,67 @@
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Button, Menu, Icon, List } from "@material-ui/core";
+import { AppBar, Toolbar, Button, Box } from "@material-ui/core";
 import "../css/Header.css";
-import { ParagraphHeader } from "./HTMLBuildHelpers";
+import { Title } from "./HTMLBuildHelpers";
+import Bio from "./Bio";
 
 const Header = () => {
   return (
-    <AppBar id="navbar" position="static">
-      <Button id="logo" component={Link} to="/" color="inherit">
-        <img src="/images/logo2.png" alt="page logo"></img>
-      </Button>
-      <Toolbar className="toolbar">
-        <List id="nav-list">
+    <AppBar
+      id="navbar"
+      className="header"
+      position="static"
+    >
+      <Toolbar
+        id="toolbar"
+        disableGutters={true}
+        className="toolbar"
+      >
+        <Bio bioType={{ type: "nav-bio" }} />
+        <Box
+          id="nav-list"
+          className="nav-list"
+        >
           <Button
             className="nav-button"
             component={Link}
             to="/"
             color="inherit"
           >
-            {ParagraphHeader(`Home`, "primary")}
+            {Title(`Home`, "h3")}
           </Button>
-          <Button
+          {/* <Button
             className="nav-button"
             component={Link}
             to="/blog"
             color="inherit"
           >
-            {ParagraphHeader(`Blog`, "primary")}
-          </Button>
+            {Title(`Blog`, "h3")}
+          </Button> */}
           <Button
             className="nav-button"
             component={Link}
             to="/projects"
             color="inherit"
           >
-            {ParagraphHeader(`Projects`, "primary")}
+            {Title(`Projects`, "h3")}
           </Button>
-          <Button
+          {/* <Button
             className="nav-button"
             component={Link}
             to="/about-me"
             color="inherit"
           >
-            {ParagraphHeader(`About Me`, "primary")}
-          </Button>
+            {Title(`About Me`, "h3")}
+          </Button> */}
           <Button
             className="nav-button"
             component={Link}
             to="/contact"
             color="inherit"
           >
-            {ParagraphHeader(`Contact`, "primary")}
+            {Title(`Contact`, "h3")}
           </Button>
-        </List>
+        </Box>
       </Toolbar>
     </AppBar>
   );
