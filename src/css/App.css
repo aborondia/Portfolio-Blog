@@ -1,47 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  /* pallette#1 */
-  --background: linear-gradient(
+  --root-background: linear-gradient(
     145deg,
-    hsla(23, 23.6%, 82.5%) 10%,
-    hsla(23, 23.6%, 82.5%) 20%,
-    hsla(23, 23.6%, 82.5%) 30%,
-    hsla(23, 23.6%, 82.5%) 40%,
-    hsla(23, 23.6%, 82.5%) 50%,
-    hsla(23, 23.6%, 82.5%) 60%,
-    hsla(23, 23.6%, 82.5%) 70%,
-    hsla(23, 23.6%, 82.5%) 80%,
-    hsla(23, 23.6%, 82.5%) 90%,
-    hsla(23, 23.6%, 82.5%) 100%
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%,
+    hsla(36, 61%, 86%) 100%
   );
-  /* pallette#2 */
-  /* --background: linear-gradient(
+  --header-background: linear-gradient(
     145deg,
-    hsla(224, 56%, 14%) 10%,
-    hsla(224, 56%, 14%) 20%,
-    hsla(224, 56%, 14%) 30%,
-    hsla(224, 56%, 14%) 40%,
-    hsla(224, 56%, 14%) 50%,
-    hsla(224, 56%, 14%) 60%,
-    hsla(224, 56%, 14%) 70%,
-    hsla(224, 56%, 14%) 80%,
-    hsla(224, 56%, 14%) 90%,
-    hsla(224, 56%, 14%) 100%
-  ); */
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%,
+    hsl(245, 13%, 20%) 100%
+  );
 
-  --hover: rgba(255, 255, 255, 0.25);
-  /* pallette#1 */
-  --header-font: rgba(50, 50, 50, 1);
-  --regular-font: rgba(50, 50, 50, 0.8);
-  --link-font: rgba(50, 50, 50, 0.6);
-  /* pallette#2 */
-  /* --header-font: rgb(226, 232, 240);
-  --regular-font: rgb(148, 163, 184);
-  --link-font: rgb(226, 232, 240); */
+  --nav-font-size: 1.5rem;
+  --nav-font-weight: 600;
+  --section-heading-font-size: 3.5rem;
+  --section-heading-font-weight: 700;
+  --sub-heading-font-size: 2rem;
+  --sub-heading-font-weight: 500;
+  --title-heading-font-size: 1.5rem;
+  --title-heading-font-weight: 500;
+  --caption-font-size: 0.875rem;
+  --caption-font-weight: 300;
+  --paragraph-font-size: 1rem;
+  --paragraph-font-weight: 400;
+  --hover: rgba(0, 140, 186, 0.25);
+  --header-font: rgba(255, 255, 255, 1);
+  --regular-font: rgba(46, 45, 58, 1);
+  --link-font: rgba(15, 52, 96, 1);
+}
+
+.MuiButton-text {
+  padding-left: 0px;
 }
 
 a {
+  color: #0f3460;
   text-decoration: none;
 }
 
@@ -57,11 +67,46 @@ body {
   padding: 0;
   min-width: 100vw;
   min-height: 100vh;
-  background-image: var(--background);
+  background-color: rgba(26, 26, 46, 1);
+  background-image: var(--root-background);
+}
+
+.MuiTypography-h2 {
+  font-size: var(--section-heading-font-size) !important;
+  font-weight: var(--section-heading-font-weight) !important;
+}
+
+.MuiTypography-h3 {
+  font-size: var(--sub-heading-font-size) !important;
+  font-weight: var(--sub-heading-font-weight) !important;
+}
+
+.MuiTypography-h4 {
+  font-size: var(--title-heading-font-size) !important;
+  font-weight: var(--title-heading-font-weight) !important;
+}
+
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4 {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.MuiTypography-h5 {
+  font-size: var(--paragraph-font-size);
+}
+
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+a:hover {
+  color: #00bfff;
 }
 
 .title {
-  color: var(--header-font);
   margin: 0;
   padding: 0;
 }
@@ -71,6 +116,8 @@ body {
 }
 
 .paragraph {
+  font-size: var(--paragraph-font-size) !important;
+  font-weight: var(--paragraph-font-weight) !important;
   color: var(--regular-font);
 }
 

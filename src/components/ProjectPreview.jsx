@@ -26,7 +26,6 @@ const ProjectPreview = ({ projectId }) => {
       <CardHeader
         className="card-header"
         title={Title(title, "h3")}
-        // subheader={gitHub}
       />
       <CardMedia
         className="card-media"

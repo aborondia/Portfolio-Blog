@@ -52,6 +52,15 @@ const images = {
       },
     },
   },
+  project8: {
+    img: {
+      src: "/images/project8/image.png",
+      alt: "an example of a search in the app",
+      caption: {
+        text: `A screenshot of the job details create/edit screen.`,
+      },
+    },
+  },
 };
 
 const projects = [
@@ -69,23 +78,6 @@ const projects = [
     gitHub: "https://github.com/aborondia/Unnamed-RPG-Game",
     live: "",
   },
-  // {
-  //   id: 2,
-  //   title: "Laptop Supplier",
-  //   description: (
-  //     <>
-  //       This is a project I made as part of the Software Developer program at
-  //       the Manitoba Institute of trades and Technology. It was created using C#
-  //       & ASP.Net MVC that has the basic functionality of an online shop. It
-  //       allows users to search through a (small, local) database of laptops.
-  //       Some of the functionalities that are implemented are sorting based on
-  //       criteria such as price, year, etc., adding/removing brands/laptops from
-  //       the database, and comparing laptop models.
-  //     </>
-  //   ),
-  //   gitHub: "https://github.com/aborondia/Laptop-Supplier",
-  //   live: "https://bsite.net/aborondia/",
-  // },
   {
     id: 3,
     title: "MittFlix",
@@ -114,24 +106,6 @@ const projects = [
     gitHub: "https://github.com/aborondia/MittReads",
     live: "https://fervent-visvesvaraya-fc46ee.netlify.app/",
   },
-  // {
-  //   id: 5,
-  //   title: "Trip Planner",
-  //   description: (
-  //     <>
-  //       This is a project I made as part of the Software Developer program at
-  //       the Manitoba Institute of trades and Technology. It it made in
-  //       JavaScript, and uses the <a href="https://www.mapbox.com">mapBox</a>{" "}
-  //       API, and <a href="https://api.winnipegtransit.com">Winnipeg</a> Transit
-  //       API, to allow users to search for their destination origin (can also use
-  //       user location), and destination, and gives them a list of routes (based
-  //       on current time) they can take to reach it. The user can click on a
-  //       route to view directions (ride bus, walk, transfer).
-  //     </>
-  //   ),
-  //   gitHub: "https://github.com/aborondia/Trip-Planner",
-  //   live: "https://flamboyant-mahavira-e9230e.netlify.app/",
-  // },
   {
     id: 6,
     title: "Portfolio Blog",
@@ -146,21 +120,19 @@ const projects = [
     gitHub: "https://github.com/aborondia/Portfolio-Blog",
     live: "",
   },
-  // {
-  //   id: 7,
-  //   title: "Nexbuss",
-  //   description: (
-  //     <>
-  //       This is a project I made during my time in the Software Developer course
-  //       at the Manitoba Institute of Trades and Technology. It uses the{" "}
-  //       <a href="https://api.winnipegtransit.com/">Winnipeg Transit API</a> to
-  //       find information on buses that will be stopping at a specific stop,
-  //       which can be searched based on the street name.
-  //     </>
-  //   ),
-  //   gitHub: "https://github.com/aborondia/Nexbuss",
-  //   live: "https://flamboyant-mestorf-a2139c.netlify.app/",
-  // },
+  {
+    id: 8,
+    title: "Job Details",
+    description: (
+      <>
+        This is a project I created to replace an old paper based report system
+        for my wife's job to make her life easier. It uses Unity as a frontend &
+        connects/stores data in a back end server (Back4app in this case).
+      </>
+    ),
+    gitHub: "",
+    live: "http://localhost:3000/job-details",
+  },
 ];
 
 export const getProjectPreview = (id) => {
@@ -177,7 +149,6 @@ export const getProjectPreview = (id) => {
 
 export const getProjectsIds = () => {
   let projectIds = [];
-  // let projects = projects.map((id) => id);
   projects.forEach((proj) => projectIds.push(proj.id));
 
   return projectIds;

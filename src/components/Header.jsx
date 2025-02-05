@@ -9,7 +9,7 @@ const Header = () => {
     <AppBar
       id="navbar"
       className="header"
-      position="static"
+      position="sticky"
     >
       <Toolbar
         id="toolbar"
@@ -27,40 +27,35 @@ const Header = () => {
             to="/"
             color="inherit"
           >
-            {Title(`Home`, "h3")}
+            {Title(`Home`, "h5")}
           </Button>
-          {/* <Button
-            className="nav-button"
-            component={Link}
-            to="/blog"
-            color="inherit"
-          >
-            {Title(`Blog`, "h3")}
-          </Button> */}
+
           <Button
             className="nav-button"
             component={Link}
             to="/projects"
             color="inherit"
           >
-            {Title(`Projects`, "h3")}
+            {Title(`Projects`, "h5")}
           </Button>
-          {/* <Button
-            className="nav-button"
-            component={Link}
-            to="/about-me"
-            color="inherit"
-          >
-            {Title(`About Me`, "h3")}
-          </Button> */}
+
           <Button
             className="nav-button"
             component={Link}
             to="/contact"
             color="inherit"
           >
-            {Title(`Contact`, "h3")}
+            {Title(`Contact`, "h5")}
           </Button>
+
+          {/* <Button
+            className="nav-button"
+            component={Link}
+            to="/unity-container"
+            color="inherit"
+          >
+            {Title(`Unity Container`, "h3")}
+          </Button> */}
         </Box>
       </Toolbar>
     </AppBar>

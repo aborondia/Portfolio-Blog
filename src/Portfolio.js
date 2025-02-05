@@ -1,18 +1,15 @@
 import "./css/App.css";
-import Title from "./components/Header";
-import Blog from "./components/Blog";
-// import AboutMe from "./components/AboutMe";
+import Header from "./components/Header";
 import Projects from "./components/Projects";
 import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Contact from "./components/Contact";
-import Post from "./components/Post";
 import "./css/Post.css";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Inconsolata",
+    fontFamily: '"Montserrat", "Open Sans", sans-serif',
     "fontWeightExtra-light": 200,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -23,12 +20,9 @@ const theme = createTheme({
     fontWeightBlack: 900,
   },
   components: {
-    // Name of the component
     MuiButton: {
       styleOverrides: {
-        // Name of the slot
         root: {
-          // Some CSS
           fontSize: "1rem",
         },
       },
@@ -40,50 +34,42 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <main className="main">
-        <Title />
         <Switch>
           <Route
             exact
             path="/"
           >
+            <Header />
             <Main />
           </Route>
-
-          <Route
-            exact
-            path="/blog"
-          >
-            <Blog />
-          </Route>
-
           <Route
             exact
             path="/projects"
           >
+            <Header />
             <Projects />
           </Route>
-
-          {/* <Route
-            exact
-            path="/about-me"
-          >
-            <AboutMe />
-          </Route> */}
-
           <Route
             exact
             path="/contact"
           >
+            <Header />
             <Contact />
           </Route>
-
-          <Route path="/blog/post">
-            <Post />
-          </Route>
+          {/* <Route path="/unity-container">
+            <UnityContainer />
+          </Route> */}
         </Switch>
       </main>
     </ThemeProvider>
   );
 };
+
+// const UnityApp = () => {
+//   useEffect(() => {
+//     // Redirect to the Unity build
+//     window.location.href = "/unity-build/index.html";
+//   }, []);
+// };
 
 export default App;

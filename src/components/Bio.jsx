@@ -9,8 +9,8 @@ const Bio = ({ bioType }) => {
       className={bioType?.type}
     >
       {window.scrollTo(0, 0, "smooth")}
-      {Title("Andrew Borondia", "h3", "center", ["title", "bio-name"])}
-      {Title("Software Developer", "h4", "center", ["title", "bio-role"])}
+      {Title("Andrew Borondia", "h2", "center", ["title", "bio-name"])}
+      {Title("Software Developer", "h3", "center", ["title", "bio-role"])}
     </Container>
   );
 };

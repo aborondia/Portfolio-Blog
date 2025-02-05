@@ -1,16 +1,17 @@
 import React from "react";
 import "../css/Main.css";
 import { Paragraph } from "./HTMLBuildHelpers";
-// import PostPreview from "./PostPreview";
 import ProjectPreview from "./ProjectPreview";
 import { getPostsLength } from "../Posts";
 import { getProjectsIds } from "../Projects";
+import { Title } from "./HTMLBuildHelpers";
 import Container from "@material-ui/core/Container";
 import Bio from "./Bio";
 
 const Main = () => {
   const previewPosts = [];
   const postsLength = getPostsLength() - 1;
+  // console.log(postsLength);
   const previewProjects = [];
   const projectIds = getProjectsIds();
 
@@ -36,18 +37,18 @@ const Main = () => {
           Since the completion of the course, I have worked on many varied
           projects, mostly solutions built in <b>Unity</b>. These projects
           include several <b>VR based educational games</b> created for the
-          contruction sector, a heavy <b>UI</b> front end for a biology engine
+          contruction sector, a <b>UI</b> heavy front end for a biology engine
           built with <b>Unity's UI Toolkit</b>, and other cool things.
         </>
       )}
       {Paragraph(
         <>
-          These days when I'm not spending time with my wife & daughter, I'm
+          These days when I'm not spending time with my family, I'm
           either gaming, or working on whatever side project that happens to
           have taken my fancy at the time.
         </>
       )}
-      {/* {Title("Recent Posts")} */}
+      {Title("Recent Posts")}
       <div id="card-container">
         {previewProjects.map((id, index) => {
           return (
@@ -57,14 +58,6 @@ const Main = () => {
             />
           );
         })}
-        {/* {previewPosts.map((id, index) => {
-          return (
-            <PostPreview
-              postId={id}
-              key={index}
-            />
-          );
-        })} */}
       </div>
     </Container>
   );

@@ -1,19 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
-
 #navbar {
   pointer-events: none;
   box-shadow: 1.5px 1.5px hsla(0, 0, 19.6);
-  background-image: var(--background);
+  background-image: var(--header-background);
 }
 
 #navbar > .toolbar {
   pointer-events: all;
-  position: sticky;
 }
 
 #navbar .toolbar a span div {
-  font-size: 1.25rem;
-  font-family: "Open Sans";
+  font-size: var(--nav-font-size);
+  font-weight: var(--nav-font-weight);
 }
 
 .nav-list {
@@ -28,7 +25,7 @@
   border-radius: 1.5rem;
 }
 
-.nav-button:hover .title {
+.nav-button:hover .MuiTouchRipple-root {
   border-radius: 1.5rem;
   background-color: var(--hover);
 }
@@ -36,14 +33,12 @@
 .nav-button {
   min-width: fit-content;
   max-width: fit-content;
-  /* border-radius: 1.5rem; */
-  /* background-color: var(--hover); */
 }
 
 @media only screen and (max-width: 4800px) {
   #navbar {
-    min-width: 354px;
-    max-width: 35vw;
+    /* min-width: 354px; */
+    max-width: 30vw;
     min-height: 100vh;
     align-items: center;
     justify-content: flex-start;
@@ -56,14 +51,11 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    position: sticky;
   }
 
   .nav-list {
     flex-direction: column;
-  }
-
-  .nav-list a {
-    min-width: 100%;
   }
 }
 
@@ -71,15 +63,16 @@
   #navbar {
     min-width: 100vw;
     max-width: none;
-    min-height: 20vh;
-    max-height: 20vh;
+    min-height: 10vh;
     align-items: center;
     justify-content: center;
   }
 
+  .header {
+    top: 0;
+  }
+
   #navbar .toolbar {
-    left: auto;
-    top: auto;
     flex-direction: row;
     text-align: center;
     align-items: center;
@@ -88,9 +81,5 @@
 
   .nav-list {
     flex-direction: row;
-  }
-
-  .nav-list a {
-    min-width: auto;
   }
 }
