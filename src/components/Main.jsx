@@ -2,24 +2,21 @@ import React from "react";
 import "../css/Main.css";
 import { Paragraph } from "./HTMLBuildHelpers";
 import ProjectPreview from "./ProjectPreview";
-import { getPostsLength } from "../Posts";
-import { getProjectsIds } from "../Projects";
 import { Title } from "./HTMLBuildHelpers";
 import Container from "@material-ui/core/Container";
+import { useProjects } from "../scripts/ProjectsContext";
 import Bio from "./Bio";
 
 const Main = () => {
-  const previewPosts = [];
-  const postsLength = getPostsLength() - 1;
-  // console.log(postsLength);
-  const previewProjects = [];
-  const projectIds = getProjectsIds();
+  const { projectsInfo, loading, error } = useProjects();
 
-  for (let i = postsLength + 1; i > postsLength - 3; i--) {
-    previewPosts.push(i);
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
-  projectIds.forEach((pi) => previewProjects.push(pi));
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <Container id="main-container">
@@ -43,17 +40,17 @@ const Main = () => {
       )}
       {Paragraph(
         <>
-          These days when I'm not spending time with my family, I'm
-          either gaming, or working on whatever side project that happens to
-          have taken my fancy at the time.
+          These days when I'm not spending time with my family, I'm either
+          gaming, or working on whatever side project that happens to have taken
+          my fancy at the time.
         </>
       )}
       {Title("Recent Posts")}
       <div id="card-container">
-        {previewProjects.map((id, index) => {
+        {projectsInfo.map((project, index) => {
           return (
             <ProjectPreview
-              projectId={id}
+              project={project}
               key={index}
             />
           );

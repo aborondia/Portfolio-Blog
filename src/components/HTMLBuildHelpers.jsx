@@ -118,8 +118,8 @@ export const HyperLink = (address, linkDescription = address) => {
   );
 };
 
-export const Image = (image, larger = false) => {
-  if (image.src === "") {
+export const Image = (source, alt, caption, link, larger = false) => {
+  if (source === "") {
     return;
   }
 
@@ -129,8 +129,8 @@ export const Image = (image, larger = false) => {
       className={larger ? "large-picture" : "small-picture"}
     >
       <img
-        src={image.src}
-        alt={image.alt}
+        src={source}
+        alt={alt}
       />
       <Typography
         className="caption"
@@ -138,19 +138,7 @@ export const Image = (image, larger = false) => {
         color="inherit"
         component="div"
       >
-        <></>
-        {image.caption.text}
-        <HTTPLink
-          display="block"
-          href={image.caption.link}
-          alt=""
-          color="inherit"
-          className="link"
-          variant="caption"
-        >
-          {image.caption.link}
-          <></>
-        </HTTPLink>
+        {caption}
       </Typography>
     </Container>
   );

@@ -1,13 +1,11 @@
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import { getProjectPreview } from "../Projects";
 import { Description, Title } from "./HTMLBuildHelpers";
 import { useHistory } from "react-router-dom";
 
-const ProjectPreview = ({ projectId }) => {
+const ProjectPreview = ({ project }) => {
   const history = useHistory();
-  const { title, description, image } = getProjectPreview(projectId);
   const noImageSrc = "images/no-image.svg";
 
   const goToProject = (projectId) => {
@@ -21,18 +19,18 @@ const ProjectPreview = ({ projectId }) => {
   return (
     <Card
       className="preview-card"
-      onClick={() => goToProject(projectId)}
+      onClick={() => goToProject(project.id)}
     >
       <CardHeader
         className="card-header"
-        title={Title(title, "h3")}
+        title={Title(project.title, "h3")}
       />
       <CardMedia
         className="card-media"
-        image={image.src ? image.src : noImageSrc}
-        title={image ? image.alt : ""}
+        image={project.imageSource ? project.imageSource : noImageSrc}
+        title={project.title}
       />
-      {Description(description)}
+      {Description(project.description)}
     </Card>
   );
 };
