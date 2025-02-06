@@ -45,9 +45,9 @@ const Main = () => {
           my fancy at the time.
         </>
       )}
-      {Title("Recent Posts")}
+      {Title("Recent Projects")}
       <div id="card-container">
-        {projectsInfo.map((project, index) => {
+        {projectsInfo.slice(0, 4).map((project, index) => {
           return (
             <ProjectPreview
               project={project}
