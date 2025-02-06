@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import Underscore, { where } from "underscore";
 import ServerCommunicator from "./ServerCommunicator.js";
 import Project from "../dataTransferModels/Project";
 
@@ -16,7 +17,14 @@ export const ProjectsProvider = ({ children }) => {
 
       try {
         const rawProjects = await ServerCommunicator.fetchProjects();
-        const deserializedProjects = rawProjects.map((projectData) => new Project(projectData));
+        let deserializedProjects = rawProjects
+          .sort(function (a, b) {
+            return a.orderIndex - b.orderIndex;
+          })
+          .map((projectData) => new Project(projectData));
+        deserializedProjects = Underscore.where(deserializedProjects, {
+          displayProject: true,
+        });
         setProjectsInfo(deserializedProjects);
       } catch (error) {
         setError(error);

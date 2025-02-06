@@ -3,6 +3,8 @@ export default class Project {
     objectId,
     title,
     description,
+    descriptionIsHTML,
+    orderIndex,
     github,
     live,
     imageSource,
@@ -13,6 +15,8 @@ export default class Project {
     this.id = objectId;
     this.title = title;
     this.description = description;
+    this.descriptionIsHTML = descriptionIsHTML;
+    this.orderIndex = orderIndex;
     this.github = github;
     this.live = live;
     this.imageSource = imageSource;

@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useProjects } from "../scripts/ProjectsContext";
+import DOMPurify from "dompurify";
 
 const Projects = () => {
   const { projectsInfo, loading, error } = useProjects();
@@ -27,7 +28,7 @@ const Projects = () => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
-  
+
   return (
     <Container
       id="projects-container"
@@ -39,7 +40,6 @@ const Projects = () => {
           if (!project.id) {
             return "";
           }
-
           isScrollRef = !noScrollRef && project.id === targetProjectId;
 
           return (
@@ -53,9 +53,13 @@ const Projects = () => {
               <li className="description-title">
                 {Title(project.title, "h3")}
               </li>
+              {project.imageSource ? (
               <li>
                 {Image(project.imageSource, project.imageAlt, project.caption)}
               </li>
+              ) : (
+                ""
+              )}
               {project.github ? (
                 <li className="small">{HyperLink(project.github, "GitHub")}</li>
               ) : (
@@ -66,7 +70,15 @@ const Projects = () => {
               ) : (
                 ""
               )}
-              {Paragraph(project.description)}
+              {project.descriptionIsHTML ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(project.description),
+                  }}
+                />
+              ) : (
+                Paragraph(project.description)
+              )}
             </Container>
           );
         })}
