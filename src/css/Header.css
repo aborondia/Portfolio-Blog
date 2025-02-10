@@ -61,7 +61,6 @@
 
 @media only screen and (max-width: 875px) {
   #navbar {
-    min-width: 100vw;
     max-width: none;
     min-height: 10vh;
     align-items: center;
