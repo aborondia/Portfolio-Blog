@@ -1,5 +1,11 @@
 import "../css/Projects.css";
-import { Title, HyperLink, Paragraph, Image } from "./HTMLBuildHelpers";
+import {
+  Title,
+  HyperLink,
+  Paragraph,
+  ParagraphFromHTML,
+  Image,
+} from "./HTMLBuildHelpers";
 import Container from "@material-ui/core/Container";
 import { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -54,9 +60,13 @@ const Projects = () => {
                 {Title(project.title, "h3")}
               </li>
               {project.imageSource ? (
-              <li>
-                {Image(project.imageSource, project.imageAlt, project.caption)}
-              </li>
+                <li>
+                  {Image(
+                    project.imageSource,
+                    project.imageAlt,
+                    project.caption
+                  )}
+                </li>
               ) : (
                 ""
               )}
@@ -70,15 +80,9 @@ const Projects = () => {
               ) : (
                 ""
               )}
-              {project.descriptionIsHTML ? (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(project.description),
-                  }}
-                />
-              ) : (
-                Paragraph(project.description)
-              )}
+              {project.descriptionIsHTML
+                ? ParagraphFromHTML(project.description)
+                : Paragraph(project.description)}
             </Container>
           );
         })}

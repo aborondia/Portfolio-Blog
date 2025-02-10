@@ -1,9 +1,8 @@
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import { Description, Title } from "./HTMLBuildHelpers";
+import { Description, DescriptionFromHTML, Title } from "./HTMLBuildHelpers";
 import { useHistory } from "react-router-dom";
-import DOMPurify from "dompurify";
 
 const ProjectPreview = ({ project }) => {
   const history = useHistory();
@@ -31,15 +30,9 @@ const ProjectPreview = ({ project }) => {
         image={project.imageSource ? project.imageSource : noImageSrc}
         title={project.title}
       />
-      {project.descriptionIsHTML ? (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(project.description),
-          }}
-        />
-      ) : (
-        Description(project.description)
-      )}
+      {project.descriptionIsHTML
+        ? DescriptionFromHTML(project.description)
+        : Description(project.description)}
     </Card>
   );
 };

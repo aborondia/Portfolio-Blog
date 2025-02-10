@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import Underscore, { where } from "underscore";
+import Underscore from "underscore";
 import ServerCommunicator from "./ServerCommunicator.js";
 import Project from "../dataTransferModels/Project";
 
@@ -7,13 +7,13 @@ const ProjectsContext = createContext();
 
 export const ProjectsProvider = ({ children }) => {
   const [projectsInfo, setProjectsInfo] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loadingProjects, setLoadingProjects] = useState(true);
+  const [errorProjects, setErrorProjects] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      setError(null);
+      setLoadingProjects(true);
+      setErrorProjects(null);
 
       try {
         const rawProjects = await ServerCommunicator.fetchProjects();
@@ -27,10 +27,10 @@ export const ProjectsProvider = ({ children }) => {
         });
         setProjectsInfo(deserializedProjects);
       } catch (error) {
-        setError(error);
+        setErrorProjects(error);
         console.error("Error fetching projects:", error);
       } finally {
-        setLoading(false);
+        setLoadingProjects(false);
       }
     };
 
@@ -38,7 +38,9 @@ export const ProjectsProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProjectsContext.Provider value={{ projectsInfo, loading, error }}>
+    <ProjectsContext.Provider
+      value={{ projectsInfo, loadingProjects, errorProjects }}
+    >
       {children}
     </ProjectsContext.Provider>
   );

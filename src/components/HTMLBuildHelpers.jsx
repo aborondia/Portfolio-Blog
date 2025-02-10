@@ -1,5 +1,6 @@
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import DOMPurify from "dompurify";
 import { Link as HTTPLink } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -61,6 +62,21 @@ export const Description = (content, colour = "textSecondary") => {
   );
 };
 
+export const DescriptionFromHTML = (content, colour = "textSecondary") => {
+  return (
+    <Typography
+      className="description"
+      display="block"
+      variant="inherit"
+      color={colour}
+      component="div"
+      dangerouslySetInnerHTML={{
+        __html: DOMPurify.sanitize(content),
+      }}
+    />
+  );
+};
+
 export const PostDate = (date) => {
   return (
     <Typography
@@ -85,6 +101,21 @@ export const Paragraph = (paragraph) => {
     >
       {paragraph}
     </Typography>
+  );
+};
+
+export const ParagraphFromHTML = (paragraph) => {
+  return (
+    <Typography
+      display="block"
+      variant="h5"
+      color="initial"
+      component="div"
+      className="paragraph"
+      dangerouslySetInnerHTML={{
+        __html: DOMPurify.sanitize(paragraph),
+      }}
+    />
   );
 };
 
